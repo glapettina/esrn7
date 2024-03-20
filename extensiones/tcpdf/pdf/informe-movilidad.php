@@ -79,9 +79,9 @@ $bloque1 = <<<EOF
 				<br>
 				<br>
 
-				ESTABLECIMIENTO: ESRN Nº 153
+				ESTABLECIMIENTO: ESRN Nº 7
 				<br>
-				LOCALIDAD: CHOELE CHOEL
+				LOCALIDAD: LAMARQUE
 				<br>
 				<br>
 				DESDE: $desde - HASTA: $hasta
@@ -396,7 +396,7 @@ $bloque5 = <<<EOF
 
 			<td style="width: 300px; font-size:12px">
 
-				Nota Nº ___________ - Choele Choel, $dia  
+				Nota Nº ___________ - Lamarque, $dia  
 
 			</td>
 

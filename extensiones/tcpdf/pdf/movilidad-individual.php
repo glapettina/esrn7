@@ -60,20 +60,20 @@ $bloque1 = <<<EOF
 
 		<tr>
 
-			<td style="width: 150px"><img src="images/logo.jpg"></td>
+			<td style="width: 80px"><img src="images/logo.jpg"></td>
 
 			<td style="background-color:white; width:590px">
 
-				<div style="font-size:12px; text-align:center; line-height:15px;">
+			<div style="font-size:12px; text-align:center; line-height:15px;">
 
-					<br>
-					Escuela Secundaria Río Negro
+			<br>
+			Escuela Secundaria Río Negro
 
-					<br>
-					Nº 153
-					
+			<br>
+			Nº 7
+			
 
-				</div>
+		</div>
 
 			</td>
 

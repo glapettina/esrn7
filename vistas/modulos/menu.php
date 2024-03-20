@@ -13,7 +13,7 @@
 				</a>
 			</li>
 
-			<?php
+<!-- 			<?php
 
 			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo") {
 
@@ -37,7 +37,7 @@
 
     			}
 
-    		?>
+    		?> -->
 
     		<li class="treeview">
             
@@ -51,7 +51,7 @@
                   
                 </a>
                
-               <?php
+<!--                <?php
                  
                   if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Preceptor") {
   
@@ -74,9 +74,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Científica") {
            
@@ -108,9 +108,9 @@
 
              }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Sociales") {
 
@@ -141,9 +141,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Lengua y Literatura") {
@@ -178,9 +178,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Matemática") {
 
@@ -213,9 +213,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Segundas Lenguas") {
 
@@ -247,9 +247,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Física") {
 
@@ -282,9 +282,9 @@
 
             }
 
-        ?>
+        ?> -->
 
-        <?php
+<!--         <?php
 
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Artística") {
@@ -315,9 +315,9 @@
 
                }
 
-            ?>
+            ?> -->
 
-            <?php
+<!--             <?php
 
             if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad") {
 
@@ -445,7 +445,7 @@
 
              }
 
-            ?>
+            ?> -->
                 
 
 
@@ -467,7 +467,7 @@
               
             </a>
             
-            <?php
+<!--             <?php
 
               if ($_SESSION["perfil"] == "Administrador") {
 
@@ -482,9 +482,9 @@
 
               }
 
-              ?>
+              ?> -->
            
-           <?php
+<!--            <?php
              
               if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Preceptor") {
 
@@ -503,9 +503,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Científica") {
        
@@ -527,9 +527,9 @@
 
          }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Sociales") {
 
@@ -550,9 +550,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Lengua y Literatura") {
@@ -577,9 +577,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Matemática") {
 
@@ -602,9 +602,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Segundas Lenguas") {
 
@@ -626,9 +626,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Física") {
 
@@ -651,9 +651,9 @@
 
         }
 
-    ?>
+    ?> -->
 
-    <?php
+<!--     <?php
 
 
     if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Artística") {
@@ -677,7 +677,7 @@
 
            }
 
-        ?>
+        ?> -->
 
 
 </ul>
@@ -685,7 +685,7 @@
 </li>
 
 
-    		<?php
+<!--     		<?php
 
 	    		if ($_SESSION["perfil"] == "Administrador") {
 
@@ -700,7 +700,7 @@
 
 			}
 
-			?>
+			?> -->
 
 			<?php
 
@@ -736,7 +736,7 @@
 
 		?>
 
-    <?php
+<!--     <?php
 
     if ($_SESSION["perfil"] == "Administrador") {
 
@@ -751,7 +751,7 @@
 
     }
 
-    ?>
+    ?> -->
 
 		<?php
 
@@ -798,7 +798,7 @@
 
     	?>
 
-    	<?php
+<!--     	<?php
 
     		if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
 
@@ -819,10 +819,10 @@
 
 	    	}
 
-    	?>
+    	?> -->
 
 
-        <?php
+<!--         <?php
 
             if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
 
@@ -842,7 +842,7 @@
 
             }
 
-        ?>
+        ?> -->
 
 <!--         <?php
 
@@ -891,7 +891,7 @@
         ?> -->
 
 
-        <?php
+<!--         <?php
 
             if ($_SESSION["perfil"] == "Administrador") {
 
@@ -910,7 +910,7 @@
 
             }
 
-        ?>
+        ?> -->
 
 
 		</ul>
