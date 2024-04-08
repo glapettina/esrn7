@@ -302,9 +302,10 @@
         /*clearBtn: true,*/
         language: "es",
         autoclose: true,
+        todayHighlight: true
         /*keyboardNavigation: false,
         todayHighlight: true*/
-    })
+    }).datepicker("setDate", new Date());
 
       $('#datepicker2').datepicker({
           /*dateFormat: 'dd-mm-yy',
