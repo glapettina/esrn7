@@ -296,9 +296,12 @@
 <script>
       
       $('#datepicker').datepicker({
+       minDate: '2024/04/24',
       /*dateFormat: 'dd-mm-yy',
       autoclose: true*/
        format: "dd/mm/yyyy",
+       startDate: '-0d',
+       endDate: '+0d',
         /*clearBtn: true,*/
         language: "es",
         autoclose: true,

@@ -24,6 +24,8 @@ class ControladorMovilidades{
 
 				$respuesta = ModeloMovilidades::mdlIngresarMovilidad($tabla, $datos);
 
+				//echo var_dump($respuesta);
+
 				if ($respuesta == "ok") {
 					
 					echo '<script>

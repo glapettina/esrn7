@@ -142,7 +142,7 @@
                 <div class="input-group">
                   
                   <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                  <input class="form-control input-lg" type="text" name="datepicker" id="datepicker" placeholder="Ingresar fecha" disabled>
+                  <input class="form-control input-lg" type="text" name="datepicker" id="datepicker" placeholder="Ingresar fecha">
 
                 </div>
 
