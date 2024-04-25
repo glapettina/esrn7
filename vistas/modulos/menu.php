@@ -781,7 +781,7 @@ if ($_SESSION["movilidad"] != "1") {
 
   echo '<li class="treeview">
         <a href="#">
-          <i class="fa fa-car"></i>
+          <i class="fa fa-user-circle-o"></i>
           <span>Asistencia</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>

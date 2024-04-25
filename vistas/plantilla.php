@@ -112,7 +112,9 @@
           $_GET["ruta"] == "cursos" ||
           $_GET["ruta"] == "ciudades" ||
           $_GET["ruta"] == "movilidad" ||
+          $_GET["ruta"] == "asistencia" ||
           $_GET["ruta"] == "movilidad-fecha" ||
+          $_GET["ruta"] == "asistencia-fecha" ||
           $_GET["ruta"] == "resumen-movilidad" ||
           $_GET["ruta"] == "resumen-docente" ||
           $_GET["ruta"] == "netbooks" ||
@@ -280,6 +282,7 @@
 <script src="vistas/js/ciudades.js"></script>
 <script src="vistas/js/alumnos.js"></script>
 <script src="vistas/js/movilidades.js"></script>
+<script src="vistas/js/asistencia.js"></script>
 <script src="vistas/js/netbooks.js"></script>
 <script src="vistas/js/servicios.js"></script>
 <script src="vistas/js/informes.js"></script>
@@ -295,8 +298,7 @@
 
 <script>
       
-      $('#datepicker').datepicker({
-       minDate: '2024/04/24',
+      $('#datepicker').datepicker({       
       /*dateFormat: 'dd-mm-yy',
       autoclose: true*/
        format: "dd/mm/yyyy",

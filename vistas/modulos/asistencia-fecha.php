@@ -4,12 +4,12 @@
     
     <section class="content-header">
       <h1>
-        Listado Movilidad Docente
+        Listado Asistencia Docente
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Listado Movilidad Docente</li>
+        <li class="active">Listado Asistencia Docente</li>
       </ol>
     </section>
 
@@ -63,7 +63,7 @@
 
                   $iddocente = $_SESSION["id"];
 
-                  echo '<button class="btn btn-primary btnListadoMovDocente" idDocente="'.$iddocente.'"]>
+                  echo '<button class="btn btn-primary btnListadoAsDocente" idDocente="'.$iddocente.'"]>
                   
                   Listar
                 </button> ';

@@ -1,52 +1,52 @@
 
 /*=============================================
-ELIMINAR MOVILIDAD            
+ELIMINAR ASISTENCIA            
 =============================================*/
 
-$(document).on("click", ".btnEliminarMovilidad", function(){
+$(document).on("click", ".btnEliminarAsistencia", function(){
 
 
-	var idMovilidad = $(this).attr("idMovilidad");
+	var idAsistencia = $(this).attr("idAsistencia");
 
 	swal({
-		title: 'Está seguro de borrar la movilidad?',
+		title: 'Está seguro de borrar la asistencia?',
 		text: "Si no lo está puede cancelar la acción",
 		type: "warning",
 		showCancelButton: true,
 		confirmButtonColor: '#3085d6',
 		cancelButtonColor: '#d33',
 		cancelButtonText: 'Cancelar',
-		confirmButtonText: 'Si, borrar movilidad'
+		confirmButtonText: 'Si, borrar asistencia'
 		}).then((result)=>{
 
 			if (result.value) {
 
-				window.location = "index.php?ruta=movilidad&idMovilidad="+idMovilidad;
+				window.location = "index.php?ruta=asistencia&idAsistencia="+idAsistencia;
 			}
 		})
 })
 
 
 /*=============================================
-IMPRIMIR MOVILIDAD INDIVIDUAL
+IMPRIMIR ASISTENCIA INDIVIDUAL
 =============================================*/
 
-$(".btnListadoMovDocente").click(function(){
+$(".btnListadoAsDocente").click(function(){
 
 	var idDocente = $(this).attr("idDocente");
 	let fecha_desde = document.getElementById("datepicker2").value; 
 	let fecha_hasta = document.getElementById("datepicker3").value; 
 
 
-	window.open("extensiones/tcpdf/pdf/movilidad-individual.php?idDocente="+idDocente+"&desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
+	window.open("extensiones/tcpdf/pdf/asistencia-individual.php?idDocente="+idDocente+"&desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
 
 })
 
 /*=============================================
-IMPRIMIR RESUMEN MOVILIDAD POR DOCENTE
+IMPRIMIR RESUMEN ASISTENCIA POR DOCENTE
 =============================================*/
 
-$(".btnResumenMovDocente").click(function(){
+$(".btnResumenAsDocente").click(function(){
 
 	//var idDocente = $(this).attr("valor");
 	let idDocente = document.getElementById("valor").value;
@@ -54,21 +54,21 @@ $(".btnResumenMovDocente").click(function(){
 	let fecha_hasta = document.getElementById("datepicker2").value; 
 
 
-	window.open("extensiones/tcpdf/pdf/resumen-docente.php?idDocente="+idDocente+"&desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
+	window.open("extensiones/tcpdf/pdf/resumen-asistencia.php?idDocente="+idDocente+"&desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
 
 })
 
 /*=============================================
-IMPRIMIR INFORME MOVILIDAD
+IMPRIMIR INFORME ASISTENCIA
 =============================================*/
 
-$(".btnInformMovDocente").click(function(){
+$(".btnInformAsDocente").click(function(){
 
 	let fecha_desde = document.getElementById("datepicker").value; 
 	let fecha_hasta = document.getElementById("datepicker2").value; 
 
 
-	window.open("extensiones/tcpdf/pdf/informe-movilidad.php?desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
+	window.open("extensiones/tcpdf/pdf/informe-asistencia.php?desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
 
 })
 

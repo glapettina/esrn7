@@ -1,13 +1,13 @@
 <?php
 
 
-class ControladorMovilidades{
+class ControladorAsistencia{
 
 	/*=============================================
-	REGISTRO DE MOVILIDAD            
+	REGISTRO DE ASISTENCIA            
 	=============================================*/
 	
-	static public function ctrCrearMovilidad(){
+	static public function ctrCrearAsitencia(){
 
 		if (isset($_POST["datepicker"])) {
 			
@@ -22,7 +22,7 @@ class ControladorMovilidades{
 								"fecha" => $fecha_final, 
 								"turno" => $_POST["nuevoTurno"]);
 
-				$respuesta = ModeloMovilidades::mdlIngresarMovilidad($tabla, $datos);
+				$respuesta = ModeloAsistencia::mdlIngresarAsistencia($tabla, $datos);
 
 
 				if ($respuesta == "ok") {
@@ -32,7 +32,7 @@ class ControladorMovilidades{
 					swal({
 
 						type: "success",
-						title: "La movilidad ha sido cargada correctamente",
+						title: "La asistencia ha sido cargada correctamente",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar",
 						closeOnConfirm: false							
@@ -41,7 +41,7 @@ class ControladorMovilidades{
 
 						if(result.value){
 
-							window.location = "movilidad";
+							window.location = "asistencia";
 							
 							}
 
@@ -58,7 +58,7 @@ class ControladorMovilidades{
 					swal({
 
 						type: "error",
-						title: "La movilidad no puede ir vacío",
+						title: "La asistencia no puede ir vacío",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar",
 						closeOnConfirm: false							
@@ -67,7 +67,7 @@ class ControladorMovilidades{
 
 						if(result.value){
 
-							window.location = "movilidad";
+							window.location = "asistencia";
 							
 							}
 
@@ -82,14 +82,14 @@ class ControladorMovilidades{
 
 
 		/*=============================================
-        MOSTRAR MOVILIDADES            
+        MOSTRAR ASISTENCIA            
 		=============================================*/
 
-		static public function ctrMostrarMovilidades($item, $valor){
+		static public function ctrMostrarAsistencia($item, $valor){
 
 			$tabla = "movilidad";
 
-			$respuesta = ModeloMovilidades::mdlMostrarMovilidades($tabla, $item, $valor);
+			$respuesta = ModeloAsistencia::mdlMostrarAsistencia($tabla, $item, $valor);
 
 			return $respuesta;
 		}
@@ -97,17 +97,16 @@ class ControladorMovilidades{
 
 
 		/*=============================================
-        LISTAR MOVILIDAD X DOCENTE         
+        LISTAR ASISTENCIA X DOCENTE         
 		=============================================*/
 
-		static public function ctrMovilidadIndividual($itemMovi, $valorMovi, $desde, $hasta){
+		static public function ctrAsistenciaIndividual($itemMovi, $valorMovi, $desde, $hasta){
 
 			$tabla = "movilidad";
 
 
-			$respuesta = ModeloMovilidades::mdlMovilidadIndividual($tabla, $itemMovi, $valorMovi, $desde, $hasta);
+			$respuesta = ModeloAsistencia::mdlAsistenciaIndividual($tabla, $itemMovi, $valorMovi, $desde, $hasta);
 
-			//var_dump($respuesta);
 
 
 			return $respuesta;
@@ -115,17 +114,15 @@ class ControladorMovilidades{
 		}
 
 		/*=============================================
-        LISTAR RESUMEN MOVILIDAD         
+        LISTAR RESUMEN ASISTENCIA         
 		=============================================*/
 
-		static public function ctrResumenMovilidad($itemMovi, $valorMovi, $desde, $hasta){
+		static public function ctrResumenAsistencia($itemMovi, $valorMovi, $desde, $hasta){
 
 			$tabla = "movilidad";
 
 
-			$respuesta = ModeloMovilidades::mdlResumenMovilidad($tabla, $itemMovi, $valorMovi, $desde, $hasta);
-
-			//var_dump($respuesta);
+			$respuesta = ModeloAsistencia::mdlResumenAsistencia($tabla, $itemMovi, $valorMovi, $desde, $hasta);
 
 
 			return $respuesta;
@@ -134,17 +131,15 @@ class ControladorMovilidades{
 
 
 		/*=============================================
-        CUENTA MOVILIDAD X DOCENTE         
+        CUENTA ASISTENCIA X DOCENTE         
 		=============================================*/
 
-		static public function ctrCuentaMovilidad($itemMovi, $valorMovi, $desde, $hasta){
+		static public function ctrCuentaAsistencia($itemMovi, $valorMovi, $desde, $hasta){
 
 			$tabla = "movilidad";
 
 
-			$respuesta = ModeloMovilidades::mdlCuentaMovilidad($tabla, $itemMovi, $valorMovi, $desde, $hasta);
-
-			//var_dump($respuesta);
+			$respuesta = ModeloAsistencia::mdlCuentaAsistencia($tabla, $itemMovi, $valorMovi, $desde, $hasta);
 
 
 			return $respuesta;
@@ -155,17 +150,17 @@ class ControladorMovilidades{
 
 
 		/*=============================================
-		BORRAR MOVILIDAD
+		BORRAR ASISTENCIA
 		=============================================*/
 
-		static public function ctrBorrarMovilidad(){
+		static public function ctrBorrarAsistencia(){
 
-			if (isset($_GET["idMovilidad"])) {
+			if (isset($_GET["idAsistencia"])) {
 				
 				$tabla = "movilidad";
-				$datos = $_GET["idMovilidad"];
+				$datos = $_GET["idAsistencia"];
 
-				$respuesta = ModeloMovilidades::mdlBorrarMovilidad($tabla, $datos);
+				$respuesta = ModeloAsistencia::mdlBorrarAsistencia($tabla, $datos);
 
 				if ($respuesta == "ok") {
 					
@@ -173,7 +168,7 @@ class ControladorMovilidades{
 
 						swal({
 							type: "success",
-							title: "La movilidad ha sido borrada correctamente",
+							title: "La asistencia ha sido borrada correctamente",
 							showConfirmButton: true,
 							confirmButtonText: "Cerrar",
 							closeOnConfirm: false
@@ -181,7 +176,7 @@ class ControladorMovilidades{
 
 								if(result.value){
 
-									window.location = "movilidad";
+									window.location = "asistencia";
 								}
 							})
 
