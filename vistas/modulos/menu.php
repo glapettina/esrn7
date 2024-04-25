@@ -775,6 +775,29 @@
 
     	?>
 
+<?php
+
+if ($_SESSION["movilidad"] != "1") {
+
+  echo '<li class="treeview">
+        <a href="#">
+          <i class="fa fa-car"></i>
+          <span>Asistencia</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="asistencia"><i class="fa fa-circle-o"></i> Registro Asistencia</a></li>
+          <li><a href="asistencia-fecha"><i class="fa fa-circle-o"></i> Resumen x Fecha</a></li>
+        </ul>
+      </li>';
+
+  }
+
+?>
+
+
 
     	<?php
 
