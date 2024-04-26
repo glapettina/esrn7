@@ -797,7 +797,56 @@ if ($_SESSION["movilidad"] != "1") {
 
 ?>
 
+<?php
 
+    if ($_SESSION["perfil"] == "Administrador") {
+
+      echo '<li>
+        <a href="#">
+
+          <i class=""></i>
+          <span></span>
+
+        </a>
+      </li>';
+
+    }
+
+    ?>
+
+<?php
+
+    if ($_SESSION["perfil"] == "Administrador") {
+
+      echo '<li>
+        <a href="#">
+
+          <i class=""></i>
+          <span></span>
+
+        </a>
+      </li>';
+
+    }
+
+    ?>
+
+<?php
+
+if ($_SESSION["perfil"] == "Administrador") {
+
+  echo '<li>
+    <a href="#">
+
+      <i class=""></i>
+      <span></span>
+
+    </a>
+  </li>';
+
+}
+
+?>
 
     	<?php
 
