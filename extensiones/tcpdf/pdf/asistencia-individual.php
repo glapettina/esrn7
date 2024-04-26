@@ -60,7 +60,7 @@ $bloque1 = <<<EOF
 
 		<tr>
 
-			<td style="width: 80px"><img src="images/logo.jpg"></td>
+			<td style="width: 80px"><img src="images/logo.png"></td>
 
 			<td style="background-color:white; width:590px">
 
