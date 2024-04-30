@@ -984,6 +984,23 @@ if ($_SESSION["perfil"] == "Administrador") {
 
         ?> -->
 
+      <?php
+
+        if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
+
+          echo '<li>
+            <a href="carga-manual">
+
+              <i class="fa fa-user-circle"></i>
+              <span>Carga Manual</span>
+
+            </a>
+          </li>';
+
+        }
+
+        ?>         
+
 
 		</ul>
 

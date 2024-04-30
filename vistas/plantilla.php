@@ -112,6 +112,7 @@
           $_GET["ruta"] == "cursos" ||
           $_GET["ruta"] == "ciudades" ||
           $_GET["ruta"] == "movilidad" ||
+          $_GET["ruta"] == "carga-manual" ||
           $_GET["ruta"] == "asistencia" ||
           $_GET["ruta"] == "movilidad-fecha" ||
           $_GET["ruta"] == "asistencia-fecha" ||

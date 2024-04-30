@@ -28,6 +28,34 @@ $(document).on("click", ".btnEliminarMovilidad", function(){
 
 
 /*=============================================
+ELIMINAR MOVILIDAD MANUAL            
+=============================================*/
+
+$(document).on("click", ".btnEliminarMovilidadManual", function(){
+
+
+	var idMovilidad = $(this).attr("idMovilidad");
+
+	swal({
+		title: 'Está seguro de borrar la asistencia/movilidad?',
+		text: "Si no lo está puede cancelar la acción",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		cancelButtonText: 'Cancelar',
+		confirmButtonText: 'Si, borrar'
+		}).then((result)=>{
+
+			if (result.value) {
+
+				window.location = "index.php?ruta=carga-manual&idMovilidad="+idMovilidad;
+			}
+		})
+})
+
+
+/*=============================================
 IMPRIMIR MOVILIDAD INDIVIDUAL
 =============================================*/
 

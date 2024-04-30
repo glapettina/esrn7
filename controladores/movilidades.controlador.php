@@ -81,6 +81,84 @@ class ControladorMovilidades{
 	}
 
 
+	/*=============================================
+	REGISTRO MANUAL DE MOVILIDAD            
+	=============================================*/
+	
+	static public function ctrCrearMovilidadManual(){
+
+		if (isset($_POST["datepicker2"])) {
+			
+				
+				$tabla = "movilidad";
+
+				$fecha = $_POST["datepicker2"];
+           		$date = str_replace('/', '-', $fecha);
+          		$fecha_final = date("Y-m-d", strtotime($date));
+
+				$datos = array("id_usuario" => $_POST["valor"],
+								"fecha" => $fecha_final, 
+								"turno" => $_POST["nuevoTurno"]);
+
+				$respuesta = ModeloMovilidades::mdlIngresarMovilidad($tabla, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+
+						type: "success",
+						title: "La movilidad ha sido cargada correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false							
+
+					}).then((result)=>{
+
+						if(result.value){
+
+							window.location = "carga-manual";
+							
+							}
+
+						});
+
+				</script>';
+
+				
+
+			}else{
+
+				echo '<script>
+
+					swal({
+
+						type: "error",
+						title: "La movilidad no puede ir vacío",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false							
+
+					}).then((result)=>{
+
+						if(result.value){
+
+							window.location = "movilidad";
+							
+							}
+
+						})
+
+				</script>';
+
+			}
+		}
+
+	}
+
+
 		/*=============================================
         MOSTRAR MOVILIDADES            
 		=============================================*/
@@ -189,5 +267,41 @@ class ControladorMovilidades{
 				}
 			}
 		}
+
+	/*=============================================
+		BORRAR MOVILIDAD MANUAL
+	=============================================*/
+
+		static public function ctrBorrarMovilidadManual(){
+
+			if (isset($_GET["idMovilidad"])) {
+				
+				$tabla = "movilidad";
+				$datos = $_GET["idMovilidad"];
+
+				$respuesta = ModeloMovilidades::mdlBorrarMovilidad($tabla, $datos);
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+						swal({
+							type: "success",
+							title: "La movilidad ha sido borrada correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result) => {
+
+								if(result.value){
+
+									window.location = "carga-manual";
+								}
+							})
+
+					</script>';
+				}
+			}
+		}	
 
 }
