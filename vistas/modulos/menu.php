@@ -986,7 +986,7 @@ if ($_SESSION["perfil"] == "Administrador") {
 
       <?php
 
-        if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
+        if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Secretario") {
 
           echo '<li>
             <a href="carga-manual">
