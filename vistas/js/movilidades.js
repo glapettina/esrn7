@@ -78,8 +78,8 @@ $(".btnResumenMovDocente").click(function(){
 
 	//var idDocente = $(this).attr("valor");
 	let idDocente = document.getElementById("valor").value;
-	let fecha_desde = document.getElementById("datepicker").value; 
-	let fecha_hasta = document.getElementById("datepicker2").value; 
+	let fecha_desde = document.getElementById("datepicker2").value; 
+	let fecha_hasta = document.getElementById("datepicker3").value; 
 
 
 	window.open("extensiones/tcpdf/pdf/resumen-docente.php?idDocente="+idDocente+"&desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");
@@ -92,8 +92,8 @@ IMPRIMIR INFORME MOVILIDAD
 
 $(".btnInformMovDocente").click(function(){
 
-	let fecha_desde = document.getElementById("datepicker").value; 
-	let fecha_hasta = document.getElementById("datepicker2").value; 
+	let fecha_desde = document.getElementById("datepicker2").value; 
+	let fecha_hasta = document.getElementById("datepicker3").value; 
 
 
 	window.open("extensiones/tcpdf/pdf/informe-movilidad.php?desde="+fecha_desde+"&hasta="+fecha_hasta, "_blank");

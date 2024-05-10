@@ -45,7 +45,7 @@
                 <div class="input-group col-lg-2">
                   
                   <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                  <input class="form-control input-lg" type="text" name="datepicker" id="datepicker" placeholder="Ingresar Desde" required>
+                  <input class="form-control input-lg" type="text" name="datepicker2" id="datepicker2" placeholder="Ingresar Desde" required>
 
           
 
@@ -60,7 +60,7 @@
                 <div class="input-group col-lg-2">
                   
                   <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                  <input class="form-control input-lg" type="text" hasta="<?php $_POST['datepicker2'] ?>" name="datepicker2" id="datepicker2" placeholder="Ingresar Hasta" required>
+                  <input class="form-control input-lg" type="text" hasta="<?php $_POST['datepicker3'] ?>" name="datepicker3" id="datepicker3" placeholder="Ingresar Hasta" required>
 
 
                 </div>

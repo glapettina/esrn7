@@ -66,7 +66,7 @@
 
 			}else{
 
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE movilidad = 1");
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE movilidad = 1 ORDER BY nombre");
 
 				$stmt -> execute();
 
