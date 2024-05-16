@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        4to. Año TM - Area Científica y Tecnológica
+        3º Primera TT - Area Científica y Tecnológica
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">4to. Año TM - Area Científica y Tecnológica</li>
+        <li class="active">3º Primera TT - Area Científica y Tecnológica</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=7 tabla="cuarto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=11 tabla="tercero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="cientifica" idCurso=7 tabla="cuarto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="cientifica" idCurso=11 tabla="tercero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 7;
-                  $tabla = "cuarto";
+                  $valor = 11;
+                  $tabla = "tercero";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeCientifica" nombreAlumno="'.$value["nombre"].'" tabla="cuarto" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeCientifica" nombreAlumno="'.$value["nombre"].'" tabla="tercero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" tabla="cuarto" periodo="'.$_SESSION['periodo'].'" area="cientifica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="tercero" area="cientifica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -280,8 +280,8 @@
 
          <?php
 
-              $tabla = "cuarto";
-              $curso = "4tm-cientifica";
+              $tabla = "tercero";
+              $curso = "31tt-cientifica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeCientifica($tabla, $curso);
@@ -364,9 +364,9 @@
 
          <?php
 
-              $tabla = "cuarto";
-              $curso = "4tm-cientifica";
-              $ncurso = 7;
+              $tabla = "tercero";
+              $curso = "31tt-cientifica";
+              $ncurso = 11;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();

@@ -51,7 +51,7 @@
                   
                 </a>
                
-<!--                <?php
+                <?php
                  
                   if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Preceptor") {
   
@@ -74,9 +74,9 @@
 
             }
 
-        ?> -->
+        ?> 
 
-<!--         <?php
+         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Científica") {
            
@@ -89,18 +89,23 @@
                 </a>
 
                <ul class="treeview-menu">                
-                  <li><a href="1tm-cientifica"><i class="fa fa-circle-o"></i> 1er. Año - TM</a></li>
-                  <li><a href="1tt-cientifica"><i class="fa fa-circle-o"></i> 1er. Año - TT</a></li>
-                  <li><a href="2tm-cientifica"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
-                  <li><a href="2tt-cientifica"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
-                  <li><a href="3tm-cientifica"><i class="fa fa-circle-o"></i> 3er. Año - TM</a></li>
-                  <li><a href="3tt-cientifica"><i class="fa fa-circle-o"></i> 3er. Año - TT</a></li>
-                  <li><a href="4tm-cientifica"><i class="fa fa-circle-o"></i> 4º Año - TM</a></li>             
-                  <li><a href="41tt-cientifica"><i class="fa fa-circle-o"></i> 4º Año 1ra. - TT</a></li>             
-                  <li><a href="42tt-cientifica"><i class="fa fa-circle-o"></i> 4º Año 2da. - TT</a></li>             
-                  <li><a href="5tm-cientifica"><i class="fa fa-circle-o"></i> 5º Año - TM</a></li>             
-                  <li><a href="51tt-cientifica"><i class="fa fa-circle-o"></i> 5º Año 1ra. - TT</a></li>             
-                  <li><a href="52tt-cientifica"><i class="fa fa-circle-o"></i> 5º Año 2da. - TT</a></li>             
+                  <li><a href="11tm-cientifica"><i class="fa fa-circle-o"></i> 1º 1ra. TM</a></li>
+                  <li><a href="11tt-cientifica"><i class="fa fa-circle-o"></i> 1º 1ra. TT</a></li>
+                  <li><a href="12tt-cientifica"><i class="fa fa-circle-o"></i> 1º 2da. TT</a></li>
+                  <li><a href="21tm-cientifica"><i class="fa fa-circle-o"></i> 2º 1ra. TM</a></li>
+                  <li><a href="22tm-cientifica"><i class="fa fa-circle-o"></i> 2º 2da. TM</a></li>
+                  <li><a href="21tt-cientifica"><i class="fa fa-circle-o"></i> 2º 1ra. TT</a></li>
+                  <li><a href="22tt-cientifica"><i class="fa fa-circle-o"></i> 2º 2da. TT</a></li>
+                  <li><a href="31tm-cientifica"><i class="fa fa-circle-o"></i> 3º 1ra. TM</a></li>
+                  <li><a href="32tm-cientifica"><i class="fa fa-circle-o"></i> 3º 2da. TM</a></li>
+                  <li><a href="31tt-cientifica"><i class="fa fa-circle-o"></i> 3º 1ra. TT</a></li>
+                  <li><a href="32tt-cientifica"><i class="fa fa-circle-o"></i> 3º 2da. TT</a></li>
+                  <li><a href="41tm-cientifica"><i class="fa fa-circle-o"></i> 4º 1ra. TM</a></li>             
+                  <li><a href="42tm-cientifica"><i class="fa fa-circle-o"></i> 4º 2da. TM</a></li>             
+                  <li><a href="41tt-cientifica"><i class="fa fa-circle-o"></i> 4º 1ra. TT</a></li>             
+                  <li><a href="51tm-cientifica"><i class="fa fa-circle-o"></i> 5º 1ra. TM</a></li>             
+                  <li><a href="52tm-cientifica"><i class="fa fa-circle-o"></i> 5º 2da. TM</a></li>             
+                  <li><a href="51tt-cientifica"><i class="fa fa-circle-o"></i> 5º 1ra. TT</a></li>             
               </ul>
 
            
@@ -108,7 +113,7 @@
 
              }
 
-        ?> -->
+        ?> 
 
 <!--         <?php
 
