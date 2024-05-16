@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        5to. Año Primera TT - Area Sociales y Humanidades
+      5º Primera TT - Area Sociales y Humanidades
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">5to. Año Primera TT - Area Sociales y Humanidades</li>
+        <li class="active">5º Primera TT - Area Sociales y Humanidades</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=12 tabla="quinto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=19 tabla="quinto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="sociales" idCurso=12 tabla="quinto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="sociales" idCurso=19 tabla="quinto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 12;
+                  $valor = 19;
                   $tabla = "quinto";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
@@ -359,7 +359,7 @@
 
               $tabla = "quinto";
               $curso = "51tt-sociales";
-              $ncurso = 12;
+              $ncurso = 19;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();
