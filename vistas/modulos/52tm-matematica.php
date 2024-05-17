@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        5º Primera TT - Area Matemática
+        5º Segunda TM - Area Matemática
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">5º Primera TT - Area Matemática</li>
+        <li class="active">5º Segunda TM - Area Matemática</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=19 tabla="quinto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=18 tabla="quinto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="matematica" idCurso=19 tabla="quinto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="matematica" idCurso=18 tabla="quinto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 19;
+                  $valor = 18;
                   $tabla = "quinto";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
@@ -264,6 +264,13 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
+           <!--  <?php
+
+              $idCurso = 1;
+
+            echo'<button type="button" curso="'.$idCurso.'" tabla="primero" class="btn btn-danger pull-center" id="btnCopia">Copiar Saberes</button>';
+
+            ?>  -->
 
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
@@ -274,7 +281,7 @@
          <?php
 
               $tabla = "quinto";
-              $curso = "51tt-matematica";
+              $curso = "52tm-matematica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeMatematica($tabla, $curso);
@@ -358,8 +365,8 @@
          <?php
 
               $tabla = "quinto";
-              $curso = "51tt-matematica";
-              $ncurso = 19;
+              $curso = "52tm-matematica";
+              $ncurso = 18;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();

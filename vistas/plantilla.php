@@ -192,6 +192,9 @@
           $_GET["ruta"] == "41tm-matematica" ||
           $_GET["ruta"] == "42tm-matematica" ||
           $_GET["ruta"] == "41tt-matematica" ||
+          $_GET["ruta"] == "51tm-matematica" ||
+          $_GET["ruta"] == "52tm-matematica" ||
+          $_GET["ruta"] == "51tt-matematica" ||
           $_GET["ruta"] == "1tm-ingles" ||
           $_GET["ruta"] == "1tt-ingles" ||
           $_GET["ruta"] == "2tm-ingles" ||
