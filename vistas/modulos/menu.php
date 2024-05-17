@@ -352,14 +352,14 @@
 
             ?> 
 
-<!--             <?php
+<?php
 
-            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad") {
+            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Sociales") {
 
 
                   echo'<li class="treeview">
                       <a href="#">
-                          <i class="fa fa-graduation-cap"></i>  Ciclo Orientado
+                          <i class="fa fa-graduation-cap"></i>  C.O. Ciencias Sociales
                           <i class="fa fa-angle-left pull-right"></i>
                       </a>                            
 
@@ -374,15 +374,9 @@
                                 <ul class="treeview-menu">
                                     <li class="treeview">
                                       <li>
-                                            <a href="3-fotografia">
+                                            <a href="3-antropologia-sociales">
                                             <i class="fa fa-check-circle-o"></i>
-                                                Fotografía                          
-                                            </a>
-                                      </li>  
-                                      <li>
-                                            <a href="3-realizacion">
-                                            <i class="fa fa-check-circle-o"></i>
-                                                Realización                          
+                                                Antropología Cultural                          
                                             </a>
                                       </li>  
                                   </li>
@@ -399,27 +393,15 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                     <li>
-                                          <a href="4-fotografia">
+                                          <a href="4-antropologia-sociales">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Fotografía                          
+                                              Antropología Cultural                          
                                           </a>
                                     </li>
                                     <li>
-                                          <a href="4-realizacion">
+                                          <a href="4-comunicacion-sociales">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Realización                          
-                                          </a>
-                                    </li>
-                                    <li>
-                                          <a href="4-guion">
-                                          <i class="fa fa-check-circle-o"></i>
-                                              Guion                          
-                                          </a>
-                                    </li>
-                                    <li>
-                                          <a href="4-sonido">
-                                          <i class="fa fa-check-circle-o"></i>
-                                              Sonido                          
+                                              Comunicación y Sociedad                          
                                           </a>
                                     </li>
                                 </li>
@@ -436,41 +418,24 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                       <li>
-                                          <a href="5-fotografia">
+                                          <a href="5-proyecto-sociales">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Fotografía                          
+                                              Proyecto de Investigación                          
                                           </a>
                                       </li>
-                                     <li>
-                                          <a href="5-realizacion">
+                                      <li>
+                                          <a href="5-problematica-sociales">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Realización                          
+                                              Problemáticas Sociales                          
+                                          </a>
+                                      </li>  
+                                     <li>
+                                          <a href="5-conocimiento-sociales">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Conocimiento Social                          
                                           </a>
                                      </li>
-                                     <li>
-                                          <a href="5-guion">
-                                          <i class="fa fa-check-circle-o"></i>
-                                              Guion                          
-                                          </a>
-                                      </li>
-                                      <li>
-                                            <a href="5-sonido">
-                                            <i class="fa fa-check-circle-o"></i>
-                                                Sonido                          
-                                            </a>
-                                      </li>
-                                      <li>
-                                            <a href="5-taller">
-                                            <i class="fa fa-check-circle-o"></i>
-                                            Taller Realización                          
-                                            </a>
-                                      </li>
-                                      <li>
-                                            <a href="5-semiotica">
-                                            <i class="fa fa-check-circle-o"></i>
-                                            Semiótica                          
-                                            </a>
-                                      </li>
+                                                                         
                               </li>
                             </ul>
                             </li>
@@ -480,8 +445,143 @@
 
              }
 
-            ?> -->
+            ?> 
+
+            <?php
+
+            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Informática") {
+
+
+                  echo'<li class="treeview">
+                      <a href="#">
+                          <i class="fa fa-graduation-cap"></i>  C.O. Informática
+                          <i class="fa fa-angle-left pull-right"></i>
+                      </a>                            
+
+                        <ul class="treeview-menu">
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i>
+                                    3er. Año
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+
+                                <ul class="treeview-menu">
+                                    <li class="treeview">
+                                      <li>
+                                            <a href="3-sistemas-informatica">
+                                            <i class="fa fa-check-circle-o"></i>
+                                                Tec. Sist. Informáicos                          
+                                            </a>
+                                      </li>  
+                                  </li>
+                              </li>
+                          </ul>
+                          </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i>
+                                    4º Año
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                            
+                            <ul class="treeview-menu">
+                                <li class="treeview">
+                                    <li>
+                                          <a href="4-aplicaciones-informatica">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Ap. Informáticas                          
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="4-conectividad-informatica">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Tec. de la Conectividad                          
+                                          </a>
+                                    </li>
+                                </li>
+                            </ul>
+                            </li>
+                            </li>
+                            <li class="treeview">
+                                  <a href="#">
+                                      <i class="fa fa-circle-o"></i>
+                                      5º Año
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                  </a>
+                            
+                            <ul class="treeview-menu">
+                                <li class="treeview">
+                                      <li>
+                                          <a href="5-software-informatica">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Tec. Software Libre                          
+                                          </a>
+                                      </li>
+                                     <li>
+                                          <a href="5-legislacion-informatica">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Seg. y Leg. Informática                          
+                                          </a>
+                                     </li>
+                                     <li>
+                                          <a href="5-proyecto-informatica">
+                                          <i class="fa fa-check-circle-o"></i>
+                                              Poy. Tec. Informática                         
+                                          </a>
+                                      </li> 
+                              </li>
+                            </ul>
+                            </li>
+
+                      </ul>   
+             </li>';
+
+             }
+
+            ?> 
+
+            
                 
+        <?php
+
+
+        if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "REVE") {
+
+
+            echo'<li class="treeview">
+                <a href="#">
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Espacio EVE</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+                </a>
+
+               <ul class="treeview-menu">
+                        <li><a href="11tm-eve"><i class="fa fa-circle-o"></i> 1º 1ra. TM</a></li>
+                        <li><a href="11tt-eve"><i class="fa fa-circle-o"></i> 1º 1ra. TT</a></li>
+                        <li><a href="12tt-eve"><i class="fa fa-circle-o"></i> 1º 2da. TT</a></li>
+                        <li><a href="21tm-eve"><i class="fa fa-circle-o"></i> 2º 1ra. TM</a></li>
+                        <li><a href="22tm-eve"><i class="fa fa-circle-o"></i> 2º 2da. TM</a></li>
+                        <li><a href="21tt-eve"><i class="fa fa-circle-o"></i> 2º 1ra. TT</a></li>
+                        <li><a href="22tt-eve"><i class="fa fa-circle-o"></i> 2º 2da. TT</a></li>
+                        <li><a href="31tm-eve"><i class="fa fa-circle-o"></i> 3º 1ra. TM</a></li>
+                        <li><a href="32tm-eve"><i class="fa fa-circle-o"></i> 3º 2da. TM</a></li>
+                        <li><a href="31tt-eve"><i class="fa fa-circle-o"></i> 3º 1ra. TT</a></li>
+                        <li><a href="32tt-eve"><i class="fa fa-circle-o"></i> 3º 2da. TT</a></li>
+                        <li><a href="41tm-eve"><i class="fa fa-circle-o"></i> 4º 1ra. TM</a></li>             
+                        <li><a href="42tm-eve"><i class="fa fa-circle-o"></i> 4º 2da. TM</a></li>             
+                        <li><a href="41tt-eve"><i class="fa fa-circle-o"></i> 4º 1ra. TT</a></li>             
+                        <li><a href="51tm-eve"><i class="fa fa-circle-o"></i> 5º 1ra. TM</a></li>             
+                        <li><a href="52tm-eve"><i class="fa fa-circle-o"></i> 5º 2da. TM</a></li>             
+                        <li><a href="51tt-eve"><i class="fa fa-circle-o"></i> 5º 1ra. TT</a></li>
+               </ul>
+
+           
+            </li>';
+
+               }
+
+            ?>                
 
 
 

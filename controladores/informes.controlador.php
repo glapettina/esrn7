@@ -318,6 +318,45 @@
 			}
 		}
 
+		/*=============================================
+		COPIAR SABERES EVE           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesEve($tabla, $curso, $ncurso, $periodo){
+
+			if (isset($_POST["copiaSaberesEve"])) {
+							
+
+				$datos = array("saberes_eve" => $_POST["copiaSaberesEve"], "id_curso" => $ncurso);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesEve($tabla, $curso, $datos, $periodo);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
 
 		/*=============================================
 		COPIAR SABERES FOTOGRAFÍA           
@@ -1139,6 +1178,45 @@
 
 
 					$respuesta = ModeloInformes::mdlEditarInformeArtistica($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+		/*=============================================
+		EDITAR INFORME EVE
+		=============================================*/
+
+		static public function ctrEditarInformeEve($tabla,$curso){
+
+			if (isset($_POST["saberesEve"])) {
+								
+
+					$datos = array("saberes_eve" => $_POST["saberesEve"], "aprecia_eve" => $_POST["apreciaEve"], "asistencia_eve" => $_POST["asistenciaEve"], "observa_eve" => $_POST["observaEve"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformeEve($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {

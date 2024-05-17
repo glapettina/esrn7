@@ -242,7 +242,24 @@
           $_GET["ruta"] == "32tt-artistica" ||
           $_GET["ruta"] == "41tm-artistica" ||
           $_GET["ruta"] == "42tm-artistica" ||
-          $_GET["ruta"] == "41tt-artistica" ||
+          $_GET["ruta"] == "41tt-artistica" ||      
+          $_GET["ruta"] == "11tm-eve" ||
+          $_GET["ruta"] == "11tt-eve" ||
+          $_GET["ruta"] == "12tt-eve" ||
+          $_GET["ruta"] == "21tm-eve" ||
+          $_GET["ruta"] == "22tm-eve" ||
+          $_GET["ruta"] == "21tt-eve" ||
+          $_GET["ruta"] == "22tt-eve" ||
+          $_GET["ruta"] == "31tm-eve" ||
+          $_GET["ruta"] == "32tm-eve" ||
+          $_GET["ruta"] == "31tt-eve" ||
+          $_GET["ruta"] == "32tt-eve" ||
+          $_GET["ruta"] == "41tm-eve" ||
+          $_GET["ruta"] == "42tm-eve" ||
+          $_GET["ruta"] == "41tt-eve" ||
+          $_GET["ruta"] == "51tm-eve" ||
+          $_GET["ruta"] == "52tm-eve" ||
+          $_GET["ruta"] == "51tt-eve" ||              
           $_GET["ruta"] == "3-fotografia" ||
           $_GET["ruta"] == "3-realizacion" ||
           $_GET["ruta"] == "4-fotografia" ||

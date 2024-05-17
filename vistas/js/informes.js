@@ -700,6 +700,56 @@ $(".tablas").on("click", ".btnEditarInformeArtistica", function(){
 	
 })
 
+/*=============================================
+EDITAR INFORME EVE
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeEve", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+	
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesEve").val(respuesta["saberes_eve"]);
+			$("#apreciaEve").val(respuesta["aprecia_eve"]);
+			$("#asistenciaEve").val(respuesta["asistencia_eve"]);
+			$("#observaEve").val(respuesta["observa_eve"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
 
 /*=============================================
 EDITAR INFORME FOTOGRAFÍA

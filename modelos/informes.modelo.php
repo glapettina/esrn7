@@ -293,6 +293,32 @@
 
 		}
 
+		/*=============================================
+		COPIAR SABERES EVE           
+		=============================================*/
+
+		static public function mdlCopiarSaberesEve($tabla, $curso, $datos, $periodo){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_eve = :saberes_eve WHERE periodo = '$periodo' AND id_curso = :id_curso");
+
+			$stmt->bindParam(":saberes_eve", $datos["saberes_eve"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso", $datos["id_curso"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}	
+
 
 
 		/*=============================================
@@ -954,6 +980,36 @@
 			$stmt = null;
 
 		}
+
+
+		/*=============================================
+		EDITAR INFORME EVE           
+		=============================================*/
+
+		static public function mdlEditarInformeEve($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_eve = :saberes_eve, aprecia_eve = :aprecia_eve, asistencia_eve = :asistencia_eve, observa_eve = :observa_eve, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_eve", $datos["saberes_eve"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_eve", $datos["aprecia_eve"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_eve", $datos["asistencia_eve"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_eve", $datos["observa_eve"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}	
 
 
 		/*=============================================
