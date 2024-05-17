@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1er. Año TM - Area Educación Física
+        3º Segunda TM - Area Educación Física
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1er. Año TM - Area Educación Física</li>
+        <li class="active">3º Segunda TM - Area Educación Física</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=1 tabla="primero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=10 tabla="tercero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" periodo="'.$_SESSION['periodo'].'" area="edfisica" idCurso=1 tabla="primero" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="edfisica" idCurso=10 tabla="tercero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 1;
-                  $tabla = "primero";
+                  $valor = 10;
+                  $tabla = "tercero";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeFisica" nombreAlumno="'.$value["nombre"].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeFisica" nombreAlumno="'.$value["nombre"].'" tabla="tercero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="primero" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="tercero" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -192,7 +192,7 @@
                   <label for="saberesFisica">Saberes</label>
                       <textarea class="form-control" cols="80" rows="6" id="saberesFisica" name="saberesFisica">
                   </textarea>
-                </div>
+              </div>
 
         <!-- ENTRADA PARA LA APRECIACION --> 
 
@@ -247,7 +247,7 @@
                   <label for="observaFisica">Observaciones</label>
                       <textarea class="form-control" cols="80" rows="3" id="observaFisica" name="observaFisica">
                   </textarea>
-        </div>
+              </div>
 
 
             </div>
@@ -280,8 +280,8 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "1tm-edfisica";
+              $tabla = "tercero";
+              $curso = "32tm-edfisica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeFisica($tabla, $curso);
@@ -364,9 +364,9 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "1tm-edfisica";
-              $ncurso = 1;
+              $tabla = "tercero";
+              $curso = "32tm-edfisica";
+              $ncurso = 10;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();

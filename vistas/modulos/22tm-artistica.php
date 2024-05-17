@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        5º Primera TT - Area Educación Física
+        2º Segunda TM - Area Lenguajes Artísticos
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">5º Primera TT - Area Educación Física</li>
+        <li class="active">2º Segunda TM - Area Lenguajes Artísticos</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=19 tabla="quinto" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=6 tabla="segundo" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                 <button class="btn btn-primary btnInformeArea" area="edfisica" idCurso=19 tabla="quinto" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" idCurso=6 tabla="segundo" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 19;
-                  $tabla = "quinto";
+                  $valor = 6;
+                  $tabla = "segundo";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeFisica" nombreAlumno="'.$value["nombre"].'" tabla="quinto" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeArtistica" nombreAlumno="'.$value["nombre"].'" tabla="segundo" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="quinto" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="segundo" area="artistica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -189,8 +189,8 @@
               
               <div class="form-group">
                 
-                  <label for="saberesFisica">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="saberesFisica" name="saberesFisica">
+                  <label for="saberesArtistica">Saberes</label>
+                      <textarea class="form-control" cols="80" rows="6" id="saberesArtistica" name="saberesArtistica">
                   </textarea>
               </div>
 
@@ -203,7 +203,7 @@
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
                   
-                  <select class="form-control input-lg" id="apreciaFisica" name="apreciaFisica">
+                  <select class="form-control input-lg" id="apreciaArtistica" name="apreciaArtistica">
 
                   <option value="">Apreciación Cualitativa</option>
                   <option value="Se Apropió de los Saberes">Se Apropió de los Saberes</option>
@@ -226,7 +226,7 @@
                   
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <select class="form-control input-lg" id="asistenciaFisica" name="asistenciaFisica">
+                  <select class="form-control input-lg" id="asistenciaArtistica" name="asistenciaArtistica">
 
                   <option value="">Asistencia</option>
                   <option value="0 %">0 %</option>
@@ -244,8 +244,8 @@
 
 
               <div class="form-group">          
-                  <label for="observaFisica">Observaciones</label>
-                      <textarea class="textinput" cols="80" rows="3" id="observaFisica" name="observaFisica">
+                  <label for="observaArtistica">Observaciones</label>
+                      <textarea class="form-control" cols="80" rows="3" id="observaArtistica" name="observaArtistica">
                   </textarea>
               </div>
 
@@ -264,6 +264,14 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
+           <!--  <?php
+
+              $idCurso = 1;
+
+            echo'<button type="button" curso="'.$idCurso.'" tabla="primero" class="btn btn-danger pull-center" id="btnCopia">Copiar Saberes</button>';
+
+            ?>  -->
+
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -272,11 +280,11 @@
 
          <?php
 
-              $tabla = "quinto";
-              $curso = "51tt-edfisica";
+              $tabla = "segundo";
+              $curso = "22tm-artistica";
 
               $editarInforme = new ControladorInformes();
-              $editarInforme -> ctrEditarInformeFisica($tabla, $curso);
+              $editarInforme -> ctrEditarInformeArtistica($tabla, $curso);
 
           ?>
 
@@ -327,8 +335,8 @@
               
               <div class="form-group">
                 
-                  <label for="copiaSaberesFisica">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesFisica" name="copiaSaberesFisica">
+                  <label for="copiaSaberesArtistica">Saberes</label>
+                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesArtistica" name="copiaSaberesArtistica">
                   </textarea>
               </div>
 
@@ -356,13 +364,13 @@
 
          <?php
 
-              $tabla = "quinto";
-              $curso = "51tt-edfisica";
-              $ncurso = 19;
+              $tabla = "segundo";
+              $curso = "22tm-artistica";
+              $ncurso = 6;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();
-              $copiaSaberes -> ctrCopiarSaberesFisica($tabla, $curso, $ncurso, $periodo);
+              $copiaSaberes -> ctrCopiarSaberesArtistica($tabla, $curso, $ncurso, $periodo);
 
           ?>
 

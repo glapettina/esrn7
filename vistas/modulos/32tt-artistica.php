@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        3er. Año TM - Area Lenguajes Artísticos
+        3º Segunda TT - Area Lenguajes Artísticos
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">3er. Año TM - Area Lenguajes Artísticos</li>
+        <li class="active">3º Segunda TT - Area Lenguajes Artísticos</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=5 tabla="tercero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=12 tabla="tercero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="artistica" idCurso=5 tabla="tercero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" idCurso=12 tabla="tercero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 5;
+                  $valor = 12;
                   $tabla = "tercero";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
@@ -281,7 +281,7 @@
          <?php
 
               $tabla = "tercero";
-              $curso = "3tm-artistica";
+              $curso = "32tt-artistica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeArtistica($tabla, $curso);
@@ -365,8 +365,8 @@
          <?php
 
               $tabla = "tercero";
-              $curso = "3tm-artistica";
-              $ncurso = 5;
+              $curso = "32tt-artistica";
+              $ncurso = 12;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();

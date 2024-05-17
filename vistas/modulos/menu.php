@@ -312,9 +312,9 @@
 
             }
 
-        ?> -
+        ?> 
 
-<!--         <?php
+         <?php
 
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Artística") {
@@ -328,15 +328,20 @@
                 </a>
 
                <ul class="treeview-menu">
-                  <li><a href="1tm-artistica"><i class="fa fa-circle-o"></i> 1er. Año - TM</a></li>
-                  <li><a href="1tt-artistica"><i class="fa fa-circle-o"></i> 1er. Año - TT</a></li>
-                  <li><a href="2tm-artistica"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
-                  <li><a href="2tt-artistica"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
-                  <li><a href="3tm-artistica"><i class="fa fa-circle-o"></i> 3er. Año - TM</a></li>
-                  <li><a href="3tt-artistica"><i class="fa fa-circle-o"></i> 3er. Año - TT</a></li>
-                  <li><a href="4tm-artistica"><i class="fa fa-circle-o"></i> 4º Año - TM</a></li>             
-                  <li><a href="41tt-artistica"><i class="fa fa-circle-o"></i> 4º Año 1ra. - TT</a></li>             
-                  <li><a href="42tt-artistica"><i class="fa fa-circle-o"></i> 4º Año 2da. - TT</a></li>             
+                      <li><a href="11tm-artistica"><i class="fa fa-circle-o"></i> 1º 1ra. TM</a></li>
+                      <li><a href="11tt-artistica"><i class="fa fa-circle-o"></i> 1º 1ra. TT</a></li>
+                      <li><a href="12tt-artistica"><i class="fa fa-circle-o"></i> 1º 2da. TT</a></li>
+                      <li><a href="21tm-artistica"><i class="fa fa-circle-o"></i> 2º 1ra. TM</a></li>
+                      <li><a href="22tm-artistica"><i class="fa fa-circle-o"></i> 2º 2da. TM</a></li>
+                      <li><a href="21tt-artistica"><i class="fa fa-circle-o"></i> 2º 1ra. TT</a></li>
+                      <li><a href="22tt-artistica"><i class="fa fa-circle-o"></i> 2º 2da. TT</a></li>
+                      <li><a href="31tm-artistica"><i class="fa fa-circle-o"></i> 3º 1ra. TM</a></li>
+                      <li><a href="32tm-artistica"><i class="fa fa-circle-o"></i> 3º 2da. TM</a></li>
+                      <li><a href="31tt-artistica"><i class="fa fa-circle-o"></i> 3º 1ra. TT</a></li>
+                      <li><a href="32tt-artistica"><i class="fa fa-circle-o"></i> 3º 2da. TT</a></li>
+                      <li><a href="41tm-artistica"><i class="fa fa-circle-o"></i> 4º 1ra. TM</a></li>             
+                      <li><a href="42tm-artistica"><i class="fa fa-circle-o"></i> 4º 2da. TM</a></li>             
+                      <li><a href="41tt-artistica"><i class="fa fa-circle-o"></i> 4º 1ra. TT</a></li>             
              
               </ul>
 
@@ -345,7 +350,7 @@
 
                }
 
-            ?> -->
+            ?> 
 
 <!--             <?php
 
