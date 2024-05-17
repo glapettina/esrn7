@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        2do. Año TM - Area Lengua y Literatura
+        1º Segunda TT - Area Lengua y Literatura
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">2do. Año TM - Area Lengua y Literatura</li>
+        <li class="active">1º Segunda TT - Area Lengua y Literatura</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=3 tabla="segundo" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=4 tabla="primero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="literatura" idCurso=3 tabla="segundo" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="literatura" idCurso=4 tabla="primero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 3;
-                  $tabla = "segundo";
+                  $valor = 4;
+                  $tabla = "primero";
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeLengua" nombreAlumno="'.$value["nombre"].'" tabla="segundo" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeLengua" nombreAlumno="'.$value["nombre"].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -119,9 +119,9 @@
                             }
 
 
-                            echo '<div class="btn-group">
+                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="segundo" area="literatura" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" tabla="primero" area="literatura" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -280,8 +280,8 @@
 
          <?php
 
-              $tabla = "segundo";
-              $curso = "2tm-literatura";
+              $tabla = "primero";
+              $curso = "12tt-literatura";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeLengua($tabla, $curso);
@@ -364,9 +364,9 @@
 
          <?php
 
-              $tabla = "segundo";
-              $curso = "2tm-literatura";
-              $ncurso = 3;
+              $tabla = "primero";
+              $curso = "12tt-literatura";
+              $ncurso = 4;
               $periodo = $_SESSION['periodo'];
 
               $copiaSaberes = new ControladorInformes();

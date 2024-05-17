@@ -153,7 +153,7 @@
 
         ?> 
 
-<!--         <?php
+         <?php
 
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Lengua y Literatura") {
@@ -168,18 +168,23 @@
                 </a>
 
                <ul class="treeview-menu">
-                  <li><a href="1tm-literatura"><i class="fa fa-circle-o"></i> 1er. Año - TM</a></li>
-                  <li><a href="1tt-literatura"><i class="fa fa-circle-o"></i> 1er. Año - TT</a></li>
-                  <li><a href="2tm-literatura"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
-                  <li><a href="2tt-literatura"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
-                  <li><a href="3tm-literatura"><i class="fa fa-circle-o"></i> 3er. Año - TM</a></li>
-                  <li><a href="3tt-literatura"><i class="fa fa-circle-o"></i> 3er. Año - TT</a></li>
-                  <li><a href="4tm-literatura"><i class="fa fa-circle-o"></i> 4º Año - TM</a></li>             
-                  <li><a href="41tt-literatura"><i class="fa fa-circle-o"></i> 4º Año 1ra. - TT</a></li>             
-                  <li><a href="42tt-literatura"><i class="fa fa-circle-o"></i> 4º Año 2da. - TT</a></li>             
-                  <li><a href="5tm-literatura"><i class="fa fa-circle-o"></i> 5º Año - TM</a></li>             
-                  <li><a href="51tt-literatura"><i class="fa fa-circle-o"></i> 5º Año 1ra. - TT</a></li>             
-                  <li><a href="52tt-literatura"><i class="fa fa-circle-o"></i> 5º Año 2da. - TT</a></li>             
+               <li><a href="11tm-literatura"><i class="fa fa-circle-o"></i> 1º 1ra. TM</a></li>
+               <li><a href="11tt-literatura"><i class="fa fa-circle-o"></i> 1º 1ra. TT</a></li>
+               <li><a href="12tt-literatura"><i class="fa fa-circle-o"></i> 1º 2da. TT</a></li>
+               <li><a href="21tm-literatura"><i class="fa fa-circle-o"></i> 2º 1ra. TM</a></li>
+               <li><a href="22tm-literatura"><i class="fa fa-circle-o"></i> 2º 2da. TM</a></li>
+               <li><a href="21tt-literatura"><i class="fa fa-circle-o"></i> 2º 1ra. TT</a></li>
+               <li><a href="22tt-literatura"><i class="fa fa-circle-o"></i> 2º 2da. TT</a></li>
+               <li><a href="31tm-literatura"><i class="fa fa-circle-o"></i> 3º 1ra. TM</a></li>
+               <li><a href="32tm-literatura"><i class="fa fa-circle-o"></i> 3º 2da. TM</a></li>
+               <li><a href="31tt-literatura"><i class="fa fa-circle-o"></i> 3º 1ra. TT</a></li>
+               <li><a href="32tt-literatura"><i class="fa fa-circle-o"></i> 3º 2da. TT</a></li>
+               <li><a href="41tm-literatura"><i class="fa fa-circle-o"></i> 4º 1ra. TM</a></li>             
+               <li><a href="42tm-literatura"><i class="fa fa-circle-o"></i> 4º 2da. TM</a></li>             
+               <li><a href="41tt-literatura"><i class="fa fa-circle-o"></i> 4º 1ra. TT</a></li>             
+               <li><a href="51tm-literatura"><i class="fa fa-circle-o"></i> 5º 1ra. TM</a></li>             
+               <li><a href="52tm-literatura"><i class="fa fa-circle-o"></i> 5º 2da. TM</a></li>             
+               <li><a href="51tt-literatura"><i class="fa fa-circle-o"></i> 5º 1ra. TT</a></li>       
              
               </ul>
 
@@ -188,7 +193,7 @@
 
             }
 
-        ?> -->
+        ?> 
 
 <!--         <?php
 
