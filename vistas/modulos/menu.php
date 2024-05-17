@@ -195,7 +195,7 @@
 
         ?> 
 
-<!--         <?php
+         <?php
 
         if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Matemática") {
 
@@ -208,18 +208,23 @@
                 </a>
 
                <ul class="treeview-menu">
-                  <li><a href="1tm-matematica"><i class="fa fa-circle-o"></i> 1er. Año - TM</a></li>
-                  <li><a href="1tt-matematica"><i class="fa fa-circle-o"></i> 1er. Año - TT</a></li>
-                  <li><a href="2tm-matematica"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
-                  <li><a href="2tt-matematica"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
-                  <li><a href="3tm-matematica"><i class="fa fa-circle-o"></i> 3er. Año - TM</a></li>
-                  <li><a href="3tt-matematica"><i class="fa fa-circle-o"></i> 3er. Año - TT</a></li>
-                  <li><a href="4tm-matematica"><i class="fa fa-circle-o"></i> 4º Año - TM</a></li>             
-                  <li><a href="41tt-matematica"><i class="fa fa-circle-o"></i> 4º Año 1ra. - TT</a></li>             
-                  <li><a href="42tt-matematica"><i class="fa fa-circle-o"></i> 4º Año 2da. - TT</a></li>             
-                  <li><a href="5tm-matematica"><i class="fa fa-circle-o"></i> 5º Año - TM</a></li>             
-                  <li><a href="51tt-matematica"><i class="fa fa-circle-o"></i> 5º Año 1ra. - TT</a></li>             
-                  <li><a href="52tt-matematica"><i class="fa fa-circle-o"></i> 5º Año 2da. - TT</a></li>             
+                    <li><a href="11tm-matematica"><i class="fa fa-circle-o"></i> 1º 1ra. TM</a></li>
+                    <li><a href="11tt-matematica"><i class="fa fa-circle-o"></i> 1º 1ra. TT</a></li>
+                    <li><a href="12tt-matematica"><i class="fa fa-circle-o"></i> 1º 2da. TT</a></li>
+                    <li><a href="21tm-matematica"><i class="fa fa-circle-o"></i> 2º 1ra. TM</a></li>
+                    <li><a href="22tm-matematica"><i class="fa fa-circle-o"></i> 2º 2da. TM</a></li>
+                    <li><a href="21tt-matematica"><i class="fa fa-circle-o"></i> 2º 1ra. TT</a></li>
+                    <li><a href="22tt-matematica"><i class="fa fa-circle-o"></i> 2º 2da. TT</a></li>
+                    <li><a href="31tm-matematica"><i class="fa fa-circle-o"></i> 3º 1ra. TM</a></li>
+                    <li><a href="32tm-matematica"><i class="fa fa-circle-o"></i> 3º 2da. TM</a></li>
+                    <li><a href="31tt-matematica"><i class="fa fa-circle-o"></i> 3º 1ra. TT</a></li>
+                    <li><a href="32tt-matematica"><i class="fa fa-circle-o"></i> 3º 2da. TT</a></li>
+                    <li><a href="41tm-matematica"><i class="fa fa-circle-o"></i> 4º 1ra. TM</a></li>             
+                    <li><a href="42tm-matematica"><i class="fa fa-circle-o"></i> 4º 2da. TM</a></li>             
+                    <li><a href="41tt-matematica"><i class="fa fa-circle-o"></i> 4º 1ra. TT</a></li>             
+                    <li><a href="51tm-matematica"><i class="fa fa-circle-o"></i> 5º 1ra. TM</a></li>             
+                    <li><a href="52tm-matematica"><i class="fa fa-circle-o"></i> 5º 2da. TM</a></li>             
+                    <li><a href="51tt-matematica"><i class="fa fa-circle-o"></i> 5º 1ra. TT</a></li>             
              
               </ul>
 
@@ -228,7 +233,7 @@
 
             }
 
-        ?> -->
+        ?> 
 
 <!--         <?php
 

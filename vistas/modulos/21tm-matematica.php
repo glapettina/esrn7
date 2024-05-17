@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        2do. Año TM - Area Matemática
+        2º Primera TM - Area Matemática
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">2do. Año TM - Area Matemática</li>
+        <li class="active">2º Primera TM - Area Matemática</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=3 tabla="segundo" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=5 tabla="segundo" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="matematica" idCurso=3 tabla="segundo" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="matematica" idCurso=5 tabla="segundo" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 3;
+                  $valor = 5;
                   $tabla = "segundo"; 
                   $periodo = $_SESSION['periodo'];
                   $verifica = true;
@@ -281,7 +281,7 @@
          <?php
 
               $tabla = "segundo";
-              $curso = "2tm-matematica";
+              $curso = "21tm-matematica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeMatematica($tabla, $curso);
@@ -365,8 +365,8 @@
          <?php
 
               $tabla = "segundo";
-              $curso = "2tm-matematica";
-              $ncurso = 3;
+              $curso = "21tm-matematica";
+              $ncurso = 5;
               $periodo = $_SESSION['periodo'];
 
 
