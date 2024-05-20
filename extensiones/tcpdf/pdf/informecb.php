@@ -833,20 +833,66 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//--------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
 
 $bloque13 = <<<EOF
 
-	<table>
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
 
 		<tr>
-			<br>
 
-			<td style="width: 780px"><img src="images/footer-m.png"></td>
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:155px">
 
-			
+				<br>
+
+				ESPACIO E.V.E.
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:260px">
+
+				<br>
+
+				$respuestaInforme[saberes_eve]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+
+				<br>
+
+				$respuestaInforme[aprecia_eve]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+
+				<br>
+
+				$respuestaInforme[asistencia_eve]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+
+				<br>
+
+				$respuestaInforme[observa_eve]
+
+			</td>	
+
+
+
 		</tr>
-		
 
 	</table>
 
@@ -855,11 +901,13 @@ EOF;
 
 $pdf->writeHTML($bloque13, false, false, false, false, '');
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
+
+
 
 //SALIDA DEL ARCHIVO
 
-$pdf->Output('informe_'.$nombre.'.pdf', 'D');
+$pdf->Output('informe_'.$nombre.'.pdf');
 
 
 }

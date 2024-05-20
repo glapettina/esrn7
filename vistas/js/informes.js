@@ -1755,12 +1755,12 @@ $(".tablas").on("click", ".btnImprimirInformeCo3", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
 	var periodo = $(this).attr("periodo");
 
 
 
-
-	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&periodo="+periodo, "_blank");
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
 
 })
 
@@ -1776,12 +1776,12 @@ $(".tablas").on("click", ".btnImprimirInformeCo4", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
 	var periodo = $(this).attr("periodo");
 
 
 
-
-	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&periodo="+periodo, "_blank");
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
 
 })
 
@@ -1797,11 +1797,11 @@ $(".tablas").on("click", ".btnImprimirInformeCo5", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
 	var periodo = $(this).attr("periodo");
 
 
 
-
-	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&periodo="+periodo, "_blank");
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
 
 })

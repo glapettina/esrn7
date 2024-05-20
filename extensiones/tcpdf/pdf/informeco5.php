@@ -41,11 +41,25 @@ class imprimirReporte{
 			$tablaInforme = "quinto";
 		}
 
-		$itemInforme = "id";
-		$valorInforme = $_GET["id"];
-		$periodo = $_GET["periodo"];
-		$verifica = false;
 
+		if ($_GET["modalidad"] == "Ciencias Sociales y Humanidades") {
+			
+			$modalidad = "Ciencias Sociales y Humanidades";
+		}
+
+		if ($_GET["modalidad"] == "Informática") {
+			
+			$modalidad = "Informática";
+		}
+
+
+
+
+		$itemInforme = "id";
+		$valorInforme = $this->id;
+		$periodo = $_GET["periodo"];
+		//$tablaInforme = "primero";
+		$verifica = false;
 		$per = explode('/', $periodo);
 
 		$per2 = $per[1];
@@ -64,6 +78,7 @@ class imprimirReporte{
 		$nombre = $respuestaInforme["nombre"];
 		$idCurso = $respuestaInforme["id_curso"];
 		
+
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
 
@@ -84,7 +99,6 @@ require_once('tcpdf_include.php');
 
 $pdf = new TCPDF('L', PDF_UNIT, 'A4', true, 'UTF-8', false);
 
-
 $pdf->setPrintHeader(false); //Ahora si imprimirá cabecera
 $pdf->setPrintFooter(true); //Ahora si imprimirá pie de página
 
@@ -94,9 +108,9 @@ $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
 $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 // set margins
-$pdf->SetMargins(8, 8, 3);
-$pdf->SetHeaderMargin(10);
-$pdf->SetFooterMargin(8);
+$pdf->SetMargins(PDF_MARGIN_LEFT, 10, PDF_MARGIN_RIGHT);
+$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 $pdf->startPageGroup();
 
@@ -109,13 +123,29 @@ $bloque1 = <<<EOF
 
 	<table>
 
+		<table>
+
 		<tr>
 
 			<td style="width: 780px"><img src="images/header.png"></td>
-					
+
+			<td style="background-color:white; width:606px">
+
+				<div style="font-size:14px; text-align: right; line-height:10px;">
+
+					<br>	
+					ESCUELA SECUNDARIA RIO NEGRO Nº 153					
+
+				</div>
+
+			</td>
+
 			
 			
 		</tr>
+		
+
+	</table>
 		
 
 	</table>
@@ -131,11 +161,15 @@ $bloque2 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
-		
+		<tr>
+
+			<td style="width:540px"><img src="images/backFact2.jpg"></td>
+
+		</tr>
 
 		<tr>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:800px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:780px">
 
 				<br>
 
@@ -168,7 +202,7 @@ $bloque3 = <<<EOF
 
 		<tr>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:270px">
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:260px">
 
 				<br>
 
@@ -177,7 +211,7 @@ $bloque3 = <<<EOF
 
 			</td>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:270px">
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:185px">
 
 				<br>
 
@@ -186,7 +220,7 @@ $bloque3 = <<<EOF
 
 			</td>		
 
-			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:185px">
 
 				<br>
 
@@ -194,6 +228,15 @@ $bloque3 = <<<EOF
 
 
 			</td>			
+
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:150px">
+
+				<br>
+
+				Modalidad
+
+
+			</td>		
 
 		</tr>
 
@@ -217,7 +260,7 @@ $bloque4 = <<<EOF
 
 		<tr>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:270px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:260px">
 
 				<br>
 
@@ -228,7 +271,7 @@ $bloque4 = <<<EOF
 
 
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:270px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:185px">
 
 				<br>
 
@@ -237,11 +280,20 @@ $bloque4 = <<<EOF
 
 			</td>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:185px">
 
 				<br>
 
 				$turno
+
+
+			</td>
+
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$modalidad
 
 
 			</td>
@@ -268,7 +320,7 @@ $bloque5 = <<<EOF
 
 	<tr>
 
-			<td style="width:780px"><img src="images/backFact2-m.jpg"></td>
+			<td style="width:780px"><img src="images/backFact2.jpg"></td>
 
 		</tr>
 
@@ -276,7 +328,7 @@ $bloque5 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:180px">
 
 				<br>
 
@@ -287,7 +339,7 @@ $bloque5 = <<<EOF
 
 
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:250px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:200px">
 
 				<br>
 
@@ -295,7 +347,7 @@ $bloque5 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:165px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:150px">
 
 				<br>
 
@@ -304,7 +356,7 @@ $bloque5 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:65px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:62px">
 
 				<br>
 
@@ -312,7 +364,7 @@ $bloque5 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:156px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:#C2BDBC; width:188px">
 
 				<br>
 
@@ -346,7 +398,7 @@ $bloque6 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -357,7 +409,7 @@ $bloque6 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -365,7 +417,7 @@ $bloque6 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -374,7 +426,7 @@ $bloque6 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -382,7 +434,7 @@ $bloque6 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -416,7 +468,7 @@ $bloque7 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -427,7 +479,7 @@ $bloque7 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -435,7 +487,7 @@ $bloque7 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -444,7 +496,7 @@ $bloque7 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -452,7 +504,7 @@ $bloque7 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -486,7 +538,7 @@ $bloque8 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -497,7 +549,7 @@ $bloque8 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -505,7 +557,7 @@ $bloque8 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -514,7 +566,7 @@ $bloque8 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -522,7 +574,7 @@ $bloque8 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -556,7 +608,7 @@ $bloque9 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -567,7 +619,7 @@ $bloque9 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -575,7 +627,7 @@ $bloque9 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -584,7 +636,7 @@ $bloque9 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -592,7 +644,7 @@ $bloque9 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -626,7 +678,7 @@ $bloque10 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -637,7 +689,7 @@ $bloque10 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -645,7 +697,7 @@ $bloque10 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -654,7 +706,7 @@ $bloque10 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -662,7 +714,7 @@ $bloque10 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -696,7 +748,7 @@ $bloque11 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
@@ -707,7 +759,7 @@ $bloque11 = <<<EOF
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
@@ -715,7 +767,7 @@ $bloque11 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
@@ -724,7 +776,7 @@ $bloque11 = <<<EOF
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
@@ -732,7 +784,7 @@ $bloque11 = <<<EOF
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
@@ -754,77 +806,11 @@ $pdf->writeHTML($bloque11, false, false, false, false, '');
 //--------------------------------------------------------
 
 
-//----------------------------------------------------------------------------------
 
 
-$bloque12 = <<<EOF
+if ($modalidad == "Ciencias Sociales y Humanidades") {
 
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
-
-				<br>
-
-				C.O. - FOTOGRAFIA
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
-
-				<br>
-
-				$respuestaInforme[saberes_fotografia]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
-
-				<br>
-
-				$respuestaInforme[aprecia_fotografia]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
-
-				<br>
-
-				$respuestaInforme[asistencia_fotografia]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
-
-				<br>
-
-				$respuestaInforme[observa_fotografia]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque12, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-//----------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------
 
 
 $bloque13 = <<<EOF
@@ -837,47 +823,47 @@ $bloque13 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
-				C.O. - REALIZACION AUDIOVISUAL 
+				C.O. - METODOLOGIA Y PROYECTO DE INVESTIGACION E INSERCION COMUNITARIA
 
 
 			</td>
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
-				$respuestaInforme[saberes_realizacion]
+				$respuestaInforme[saberes_proyecto]
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
-				$respuestaInforme[aprecia_realizacion]
+				$respuestaInforme[aprecia_proyecto]
 
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
-				$respuestaInforme[asistencia_realizacion]
+				$respuestaInforme[asistencia_proyecto]
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
-				$respuestaInforme[observa_realizacion]
+				$respuestaInforme[observa_proyecto]
 
 			</td>	
 
@@ -894,75 +880,7 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
 
-
-$bloque14 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
-
-				<br>
-
-				C.O. - GUION 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
-
-				<br>
-
-				$respuestaInforme[saberes_guion]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
-
-				<br>
-
-				$respuestaInforme[aprecia_guion]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
-
-				<br>
-
-				$respuestaInforme[asistencia_guion]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
-
-				<br>
-
-				$respuestaInforme[observa_guion]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque14, false, false, false, false, '');
-
-//--------------------------------------------------------
 
 //----------------------------------------------------------------------------------
 
@@ -977,47 +895,47 @@ $bloque15 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
-				C.O. - SONIDO 
+				C.O. - PROBLEMATICAS SOCIALES LATINOAMERICANAS Y ARGENTINAS
 
 
 			</td>
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
-				$respuestaInforme[saberes_sonido]
+				$respuestaInforme[saberes_problematica]
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
-				$respuestaInforme[aprecia_sonido]
+				$respuestaInforme[aprecia_problematica]
 
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
-				$respuestaInforme[asistencia_sonido]
+				$respuestaInforme[asistencia_problematica]
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
-				$respuestaInforme[observa_sonido]
+				$respuestaInforme[observa_problematica]
 
 			</td>	
 
@@ -1047,47 +965,47 @@ $bloque16 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
-				C.O. - TALLER REALIZACION AUDIOVISUAL
+				C.O. - PROBLEMATICA DEL CONOCIMIENTO SOCIAL 
 
 
 			</td>
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
-				$respuestaInforme[saberes_taller]
+				$respuestaInforme[saberes_conocimiento]
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
-				$respuestaInforme[aprecia_taller]
+				$respuestaInforme[aprecia_conocimiento]
 
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
-				$respuestaInforme[asistencia_taller]
+				$respuestaInforme[asistencia_conocimiento]
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
-				$respuestaInforme[observa_taller]
+				$respuestaInforme[observa_conocimiento]
 
 			</td>	
 
@@ -1104,10 +1022,13 @@ $pdf->writeHTML($bloque16, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+	
+}else{
+
+	//----------------------------------------------------------------------------------
 
 
-$bloque17 = <<<EOF
+$bloque13 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -1117,47 +1038,48 @@ $bloque17 = <<<EOF
 
 		<tr>
 
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:160px">
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
 				<br>
 
-				C.O. - SEMIOTICA DE LA IMAGEN
+				C.O. - TECNOLOGÍA DEL SOFTWARE LIBRE
+
 
 
 			</td>
 
 
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:250px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
 
 				<br>
 
-				$respuestaInforme[saberes_semiotica]
+				$respuestaInforme[saberes_software]
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:165px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
 
 				<br>
 
-				$respuestaInforme[aprecia_semiotica]
+				$respuestaInforme[aprecia_software]
 
 
 			</td>
 
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:65px">
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
 
 				<br>
 
-				$respuestaInforme[asistencia_semiotica]
+				$respuestaInforme[asistencia_software]
 
 			</td>	
 
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:156px">
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
 
 				<br>
 
-				$respuestaInforme[observa_semiotica]
+				$respuestaInforme[observa_software]
 
 			</td>	
 
@@ -1170,37 +1092,232 @@ $bloque17 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque17, false, false, false, false, '');
+$pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//--------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
-$bloque18 = <<<EOF
 
-	<table>
+$bloque14 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
 
 		<tr>
-			<br>
 
-			<td style="width: 780px"><img src="images/footer-m.png"></td>
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
 
-			
+				<br>
+
+				C.O. - SEGURIDAD Y LEGISLACIÓN EN INFORMÁTICA 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_seguridad]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_seguridad]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_seguridad]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_seguridad]
+
+			</td>	
+
+
+
 		</tr>
-		
 
 	</table>
 
 EOF;
 
 
-$pdf->writeHTML($bloque18, false, false, false, false, '');
+$pdf->writeHTML($bloque14, false, false, false, false, '');
+
+//--------------------------------------------------------
 
 //----------------------------------------------------------------------------------
 
+
+$bloque15 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - PROYECTO TECNOLÓGICO EN INFORMÁTICA
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_tecnologico]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_tecnologico]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_tecnologico]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_tecnologico]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque15, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque16 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				ESPACIO E.V.E.
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_eve]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_eve]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_eve]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_eve]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque16, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+
+
+
+
+}
+
+
+
+
 //SALIDA DEL ARCHIVO
 
-$pdf->Output('informe_'.$nombre.'.pdf', 'D');
+$pdf->Output('informe_'.$nombre.'.pdf');
 
 
 }
