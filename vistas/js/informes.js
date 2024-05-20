@@ -750,6 +750,583 @@ $(".tablas").on("click", ".btnEditarInformeEve", function(){
 	
 })
 
+/*=============================================
+EDITAR INFORME ANTROPOLOGIA 3
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeAntropologia3", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesAntropologia").val(respuesta["saberes_antropologia3"]);
+			$("#apreciaAntropologia").val(respuesta["aprecia_antropologia3"]);
+			$("#asistenciaAntropologia").val(respuesta["asistencia_antropologia3"]);
+			$("#observaAntropologia").val(respuesta["observa_antropologia3"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+
+/*=============================================
+EDITAR INFORME SISTEMAS (INFORMÁTICA)
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSistemas", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSistemas").val(respuesta["saberes_sistemas"]);
+			$("#apreciaSistemas").val(respuesta["aprecia_sistemas"]);
+			$("#asistenciaSistemas").val(respuesta["asistencia_sistemas"]);
+			$("#observaSistemas").val(respuesta["observa_sistemas"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME ANTROPOLOGIA 4
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeAntropologia4", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesAntropologia").val(respuesta["saberes_antropologia4"]);
+			$("#apreciaAntropologia").val(respuesta["aprecia_antropologia4"]);
+			$("#asistenciaAntropologia").val(respuesta["asistencia_antropologia4"]);
+			$("#observaAntropologia").val(respuesta["observa_antropologia4"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME COMUNICACION
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeComunicacion", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesComunicacion").val(respuesta["saberes_comunicacion"]);
+			$("#apreciaComunicacion").val(respuesta["aprecia_comunicacion"]);
+			$("#asistenciaComunicacion").val(respuesta["asistencia_comunicacion"]);
+			$("#observaComunicacion").val(respuesta["observa_comunicacion"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME APLICACIONES
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeAplicaciones", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesAplicaciones").val(respuesta["saberes_aplicaciones"]);
+			$("#apreciaAplicaciones").val(respuesta["aprecia_aplicaciones"]);
+			$("#asistenciaAplicaciones").val(respuesta["asistencia_aplicaciones"]);
+			$("#observaAplicaciones").val(respuesta["observa_aplicaciones"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME CONECTIVIDAD
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeConectividad", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesConectividad").val(respuesta["saberes_conectividad"]);
+			$("#apreciaConectividad").val(respuesta["aprecia_conectividad"]);
+			$("#asistenciaConectividad").val(respuesta["asistencia_conectividad"]);
+			$("#observaConectividad").val(respuesta["observa_conectividad"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME PROYECTO
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeProyecto", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesProyecto").val(respuesta["saberes_proyecto"]);
+			$("#apreciaProyecto").val(respuesta["aprecia_proyecto"]);
+			$("#asistenciaProyecto").val(respuesta["asistencia_proyecto"]);
+			$("#observaProyecto").val(respuesta["observa_proyecto"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME PROBLEMATICA
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeProblematica", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesProblematica").val(respuesta["saberes_problematica"]);
+			$("#apreciaProblematica").val(respuesta["aprecia_problematica"]);
+			$("#asistenciaProblematica").val(respuesta["asistencia_problematica"]);
+			$("#observaProblematica").val(respuesta["observa_problematica"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME CONOCIMIENTO
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeConocimiento", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesConocimiento").val(respuesta["saberes_conocimiento"]);
+			$("#apreciaConocimiento").val(respuesta["aprecia_conocimiento"]);
+			$("#asistenciaConocimiento").val(respuesta["asistencia_conocimiento"]);
+			$("#observaConocimiento").val(respuesta["observa_conocimiento"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME SOFTWARE
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSoftware", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSoftware").val(respuesta["saberes_software"]);
+			$("#apreciaSoftware").val(respuesta["aprecia_software"]);
+			$("#asistenciaSoftware").val(respuesta["asistencia_software"]);
+			$("#observaSoftware").val(respuesta["observa_software"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME SEGURIDAD
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSeguridad", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSeguridad").val(respuesta["saberes_seguridad"]);
+			$("#apreciaSeguridad").val(respuesta["aprecia_seguridad"]);
+			$("#asistenciaSeguridad").val(respuesta["asistencia_seguridad"]);
+			$("#observaSeguridad").val(respuesta["observa_seguridad"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME TECNOLÓGICO
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeTecnologico", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesTecnologico").val(respuesta["saberes_tecnologico"]);
+			$("#apreciaTecnologico").val(respuesta["aprecia_tecnologico"]);
+			$("#asistenciaTecnologico").val(respuesta["asistencia_tecnologico"]);
+			$("#observaTecnologico").val(respuesta["observa_tecnologico"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
 
 /*=============================================
 EDITAR INFORME FOTOGRAFÍA
@@ -1070,21 +1647,24 @@ IMPRIMIR INFORME X ÁREA
 
 $(".btnInformeArea").click(function(){
 
-//$(".tablas").on("click", ".btnInformeArea", function(){
-
-
-	var idCurso = $(this).attr("idCurso");
-	var idCurso2 = $(this).attr("idCurso2");
-	var idCurso3 = $(this).attr("idCurso3");
-	var informe = $(this).attr("informe");
-	var area = $(this).attr("area");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
+	//$(".tablas").on("click", ".btnInformeArea", function(){
 	
-
-	window.open("extensiones/tcpdf/pdf/"+informe+".php?informe="+informe+"&area="+area+"&tabla="+tabla+"&idCurso="+idCurso+"&idCurso2="+idCurso2+"&idCurso3="+idCurso3+"&periodo="+periodo, "_blank");
-
-})
+	
+		var idCurso = $(this).attr("idCurso");
+		var idCurso2 = $(this).attr("idCurso2");
+		var informe = $(this).attr("informe");
+		var area = $(this).attr("area");
+		var tabla = $(this).attr("tabla");
+		var modalidad = $(this).attr("modalidad");
+		var periodo = $(this).attr("periodo");
+	
+	
+		//console.log(modalidad);
+		
+	
+		window.open("extensiones/tcpdf/pdf/"+informe+".php?informe="+informe+"&area="+area+"&tabla="+tabla+"&idCurso="+idCurso+"&idCurso2="+idCurso2+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
+	
+	})
 
 /*=============================================
 IMPRIMIR SEGUIMIENTO X ÁREA

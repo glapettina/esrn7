@@ -353,7 +353,8 @@
                     <option value="Docente Educación Física">Docente Educación Física</option>
                     <option value="Docente Educación Artística">Docente Educación Artística</option>
                     <option value="Docente Lengua y Literatura">Docente Lengua y Literatura</option>
-                    <option value="Docente Modalidad">Docente Modalidad</option>
+                    <option value="Docente Modalidad Informática">Docente Modalidad Informática</option>
+                    <option value="Docente Modalidad Sociales">Docente Modalidad Sociales</option>
                     <option value="Preceptor">Preceptor</option>
                     <option value="REVE">REVE</option>
 
@@ -644,7 +645,8 @@
                     <option value="Docente Educación Física">Docente Educación Física</option>
                     <option value="Docente Educación Artística">Docente Educación Artística</option>
                     <option value="Docente Lengua y Literatura">Docente Lengua y Literatura</option>
-                    <option value="Docente Modalidad">Docente Modalidad</option>
+                    <option value="Docente Modalidad Informática">Docente Modalidad Informática</option>
+                    <option value="Docente Modalidad Sociales">Docente Modalidad Sociales</option>
                     <option value="Preceptor">Preceptor</option>
                     <option value="REVE">REVE</option>
 

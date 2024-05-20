@@ -11,7 +11,6 @@ class imprimirReporte{
 
 
 	public $id;
-	public $periodo;
 
 	public function traerImpresionReporte(){
 
@@ -44,8 +43,9 @@ class imprimirReporte{
 
 		$itemInforme = "id";
 		$valorInforme = $this->id;
-		$verifica = false;
+		//$tablaInforme = "primero";
 		$periodo = $_GET["periodo"];
+		$verifica = false;
 
 		$per = explode('/', $periodo);
 
@@ -142,75 +142,156 @@ class imprimirReporte{
 
 		}
 
-		if ($_GET["area"] == "fotografia") {
+		if ($_GET["area"] == "eve") {
 
-			$area = "CICLO ORIENTADO - FOTOGRAFIA";
+			$area = "ESPACIO E.V.E.";
 
-			$saberes = $respuestaInforme["saberes_fotografia"];
-			$aprecia = $respuestaInforme["aprecia_fotografia"];
-			$asistencia = $respuestaInforme["asistencia_fotografia"];
-			$observa = $respuestaInforme["observa_fotografia"];
-
-		}
-
-		if ($_GET["area"] == "realizacion") {
-
-			$area = "CICLO ORIENTADO - REALIZACIÓN AUDIOVISUAL";
-
-			$saberes = $respuestaInforme["saberes_realizacion"];
-			$aprecia = $respuestaInforme["aprecia_realizacion"];
-			$asistencia = $respuestaInforme["asistencia_realizacion"];
-			$observa = $respuestaInforme["observa_realizacion"];
+			$saberes = $respuestaInforme["saberes_eve"];
+			$aprecia = $respuestaInforme["aprecia_eve"];
+			$asistencia = $respuestaInforme["asistencia_eve"];
+			$observa = $respuestaInforme["observa_eve"];
 
 		}
 
-		if ($_GET["area"] == "guion") {
+		if ($_GET["area"] == "antropologia3") {
 
-			$area = "CICLO ORIENTADO - GUION";
+			$area = "C.O. - ANTROPOLOGIA CULTURAL";
 
-			$saberes = $respuestaInforme["saberes_guion"];
-			$aprecia = $respuestaInforme["aprecia_guion"];
-			$asistencia = $respuestaInforme["asistencia_guion"];
-			$observa = $respuestaInforme["observa_guion"];
-
-		}
-
-		if ($_GET["area"] == "sonido") {
-
-			$area = "CICLO ORIENTADO - SONIDO";
-
-			$saberes = $respuestaInforme["saberes_sonido"];
-			$aprecia = $respuestaInforme["aprecia_sonido"];
-			$asistencia = $respuestaInforme["asistencia_sonido"];
-			$observa = $respuestaInforme["observa_sonido"];
+			$saberes = $respuestaInforme["saberes_antropologia3"];
+			$aprecia = $respuestaInforme["aprecia_antropologia3"];
+			$asistencia = $respuestaInforme["asistencia_antropologia3"];
+			$observa = $respuestaInforme["observa_antropologia3"];
 
 		}
 
-		if ($_GET["area"] == "taller") {
+		if ($_GET["area"] == "sistemas") {
 
-			$area = "CICLO ORIENTADO - TALLER DE REALIZACIÓN";
+			$area = "C.O. - TECNOLOGÍA DE LOS SISTEMAS INFORMÁTICOS";
 
-			$saberes = $respuestaInforme["saberes_taller"];
-			$aprecia = $respuestaInforme["aprecia_taller"];
-			$asistencia = $respuestaInforme["asistencia_taller"];
-			$observa = $respuestaInforme["observa_taller"];
+			$saberes = $respuestaInforme["saberes_sistemas"];
+			$aprecia = $respuestaInforme["aprecia_sistemas"];
+			$asistencia = $respuestaInforme["asistencia_sistemas"];
+			$observa = $respuestaInforme["observa_sistemas"];
+
+		}
+
+		if ($_GET["area"] == "antropologia4") {
+
+			$area = "C.O. - ANTROPOLOGIA CULTURAL";
+
+			$saberes = $respuestaInforme["saberes_antropologia4"];
+			$aprecia = $respuestaInforme["aprecia_antropologia4"];
+			$asistencia = $respuestaInforme["asistencia_antropologia4"];
+			$observa = $respuestaInforme["observa_antropologia4"];
 
 		}
 
-		if ($_GET["area"] == "semiotica") {
+		if ($_GET["area"] == "comunicacion") {
 
-			$area = "CICLO ORIENTADO - SEMIÓTICA DE LA IMAGEN";
+			$area = "C.O. - COMUNICACION Y SOCIEDAD";
 
-			$saberes = $respuestaInforme["saberes_semiotica"];
-			$aprecia = $respuestaInforme["aprecia_semiotica"];
-			$asistencia = $respuestaInforme["asistencia_semiotica"];
-			$observa = $respuestaInforme["observa_semiotica"];
+			$saberes = $respuestaInforme["saberes_comunicacion"];
+			$aprecia = $respuestaInforme["aprecia_comunicacion"];
+			$asistencia = $respuestaInforme["asistencia_comunicacion"];
+			$observa = $respuestaInforme["observa_comunicacion"];
 
 		}
-				
-		
 
-			
+		if ($_GET["area"] == "aplicaciones") {
+
+			$area = "C.O. - APLICACIONES INFORMÁTICAS";
+
+			$saberes = $respuestaInforme["saberes_aplicaciones"];
+			$aprecia = $respuestaInforme["aprecia_aplicaciones"];
+			$asistencia = $respuestaInforme["asistencia_aplicaciones"];
+			$observa = $respuestaInforme["observa_aplicaciones"];
+
+		}
+
+
+		if ($_GET["area"] == "conectividad") {
+
+			$area = "C.O. - TECNOLOGÍA DE LA CONECTIVIDAD, INVESTIGACIÓN Y DESARROLLO TECNOLÓGICO";
+
+			$saberes = $respuestaInforme["saberes_conectividad"];
+			$aprecia = $respuestaInforme["aprecia_conectividad"];
+			$asistencia = $respuestaInforme["asistencia_conectividad"];
+			$observa = $respuestaInforme["observa_conectividad"];
+
+		}
+
+
+		if ($_GET["area"] == "software") {
+
+			$area = "C.O. - TECNOLOGÍA DEL SOFTWARE LIBRE";
+
+			$saberes = $respuestaInforme["saberes_software"];
+			$aprecia = $respuestaInforme["aprecia_software"];
+			$asistencia = $respuestaInforme["asistencia_software"];
+			$observa = $respuestaInforme["observa_software"];
+
+		}
+
+
+
+		if ($_GET["area"] == "conocimiento") {
+
+			$area = "C.O. - PROBLEMATICA DEL CONOCIMIENTO SOCIAL";
+
+			$saberes = $respuestaInforme["saberes_conocimiento"];
+			$aprecia = $respuestaInforme["aprecia_conocimiento"];
+			$asistencia = $respuestaInforme["asistencia_conocimiento"];
+			$observa = $respuestaInforme["observa_conocimiento"];
+
+		}
+
+		if ($_GET["area"] == "problematica") {
+
+			$area = "C.O. - PROBLEMATICAS SOCIALES LATINOAMERICANAS Y ARGENTINAS";
+
+			$saberes = $respuestaInforme["saberes_problematica"];
+			$aprecia = $respuestaInforme["aprecia_problematica"];
+			$asistencia = $respuestaInforme["asistencia_problematica"];
+			$observa = $respuestaInforme["observa_problematica"];
+
+		}
+
+		if ($_GET["area"] == "seguridad") {
+
+			$area = "C.O. - SEGURIDAD Y LEGISLACIÓN EN INFORMÁTICA";
+
+			$saberes = $respuestaInforme["saberes_seguridad"];
+			$aprecia = $respuestaInforme["aprecia_seguridad"];
+			$asistencia = $respuestaInforme["asistencia_seguridad"];
+			$observa = $respuestaInforme["observa_seguridad"];
+
+		}
+
+
+		if ($_GET["area"] == "tecnologico") {
+
+			$area = "C.O. - PROYECTO TECNOLÓGICO EN INFORMÁTICA";
+
+			$saberes = $respuestaInforme["saberes_tecnologico"];
+			$aprecia = $respuestaInforme["aprecia_tecnologico"];
+			$asistencia = $respuestaInforme["asistencia_tecnologico"];
+			$observa = $respuestaInforme["observa_tecnologico"];
+
+		}
+
+		if ($_GET["area"] == "tierra2") {
+
+			$area = "C.O. - CIENCIAS DE LA TIERRA II";
+
+			$saberes = $respuestaInforme["saberes_tierra2"];
+			$aprecia = $respuestaInforme["aprecia_tierra2"];
+			$asistencia = $respuestaInforme["asistencia_tierra2"];
+			$observa = $respuestaInforme["observa_tierra2"];
+
+		}
+
+
+					
 
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
@@ -303,7 +384,7 @@ EOF;
 
 $pdf->writeHTML($bloque2, false, false, false, false, '');
 
-//--------------------------------------------------------
+//----------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------
 

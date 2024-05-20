@@ -260,8 +260,18 @@
           $_GET["ruta"] == "51tm-eve" ||
           $_GET["ruta"] == "52tm-eve" ||
           $_GET["ruta"] == "51tt-eve" ||              
-          $_GET["ruta"] == "3-fotografia" ||
-          $_GET["ruta"] == "3-realizacion" ||
+          $_GET["ruta"] == "3-antropologia-sociales" ||
+          $_GET["ruta"] == "3-sistemas-informatica" ||
+          $_GET["ruta"] == "4-antropologia-sociales" ||
+          $_GET["ruta"] == "4-comunicacion-sociales" ||
+          $_GET["ruta"] == "4-aplicaciones-informatica" ||
+          $_GET["ruta"] == "4-conectividad-informatica" ||
+          $_GET["ruta"] == "5-proyecto-sociales" ||
+          $_GET["ruta"] == "5-problematica-sociales" ||
+          $_GET["ruta"] == "5-conocimiento-sociales" ||
+          $_GET["ruta"] == "5-software-informatica" ||
+          $_GET["ruta"] == "5-seguridad-informatica" ||
+          $_GET["ruta"] == "5-tecnologico-informatica" ||
           $_GET["ruta"] == "4-fotografia" ||
           $_GET["ruta"] == "4-realizacion" ||
           $_GET["ruta"] == "4-guion" ||

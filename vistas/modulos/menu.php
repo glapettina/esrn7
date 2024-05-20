@@ -519,13 +519,13 @@
                                           </a>
                                       </li>
                                      <li>
-                                          <a href="5-legislacion-informatica">
+                                          <a href="5-seguridad-informatica">
                                           <i class="fa fa-check-circle-o"></i>
                                               Seg. y Leg. Informática                          
                                           </a>
                                      </li>
                                      <li>
-                                          <a href="5-proyecto-informatica">
+                                          <a href="5-tecnologico-informatica">
                                           <i class="fa fa-check-circle-o"></i>
                                               Poy. Tec. Informática                         
                                           </a>

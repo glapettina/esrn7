@@ -49,6 +49,7 @@
                 <th>Apellidos y Nombres</th>
                 <th>Curso</th>
                 <th>Turno</th>
+                <th>Modalidad</th>
                 <th>Estado</th>
                 <th>Acciones</th>
                 
@@ -82,7 +83,8 @@
 
                           echo '<td>'.$curso["nombre"].'</td>  
 
-                          <td>'.$curso["turno"].'</td>';
+                          <td>'.$curso["turno"].'</td>
+                          <td>'.$value["modalidad"].'</td>';
 
                           if ($_SESSION["perfil"] != "Preceptor") {
 

@@ -60,7 +60,7 @@
 		MOSTRAR INFORMES ORIENTACIÓN
 		=============================================*/
 
-		static public function mdlMostrarInformesOrientacion($item, $valor1, $valor2, $valor3, $tabla, $periodo, $verifica){
+		static public function mdlMostrarInformesOrientacion($item, $valor1, $valor2, $tabla, $periodo, $verifica){
 			
 
 			if ($item != null && $verifica == false) {
@@ -77,11 +77,11 @@
 
 				//$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_curso >= $valor1 OR id_curso <= $valor2 AND periodo = '$periodo' AND estado = 1");
 
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item IN ($valor1, $valor2, $valor3) AND estado = 1 AND periodo = '$periodo'");
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item IN ($valor1, $valor2) AND estado = 1 AND periodo = '$periodo'");
 
 				$stmt -> bindParam(":".$item, $valor1, PDO::PARAM_STR);
 				$stmt -> bindParam(":".$item, $valor2, PDO::PARAM_STR);
-				$stmt -> bindParam(":".$item, $valor3, PDO::PARAM_STR);
+				//$stmt -> bindParam(":".$item, $valor3, PDO::PARAM_STR);
 
 
 				$stmt -> execute();
@@ -318,6 +318,343 @@
 
 
 		}	
+
+		/*=============================================
+		COPIAR SABERES ANTROPOLOGIA 3 (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesAntropologia3($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_antropologia3 = :saberes_antropologia3 WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_antropologia3", $datos["saberes_antropologia3"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES SISTEMAS (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesSistemas($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_sistemas = :saberes_sistemas WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_sistemas", $datos["saberes_sistemas"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES ANTROPOLOGIA 4 (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesAntropologia4($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_antropologia4 = :saberes_antropologia4 WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_antropologia4", $datos["saberes_antropologia4"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES COMUNICACION (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesComunicacion($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_comunicacion = :saberes_comunicacion WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_comunicacion", $datos["saberes_comunicacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}	
+
+		/*=============================================
+		COPIAR SABERES APLICACIONES (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesAplicaciones($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_aplicaciones = :saberes_aplicaciones WHERE periodo = '$periodo' AND id_curso >= :id_curso1");
+
+			$stmt->bindParam(":saberes_aplicaciones", $datos["saberes_aplicaciones"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			//$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES CONECTIVIDAD (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesConectividad($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_conectividad = :saberes_conectividad WHERE periodo = '$periodo' AND id_curso >= :id_curso1");
+
+			$stmt->bindParam(":saberes_conectividad", $datos["saberes_conectividad"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			//$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES PROYECTO (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesProyecto($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_proyecto = :saberes_proyecto WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_proyecto", $datos["saberes_proyecto"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES PROBLEMATICA (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesProblematica($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_problematica = :saberes_problematica WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_problematica", $datos["saberes_problematica"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}	
+
+		/*=============================================
+		COPIAR SABERES CONOCIMIENTO (SOCIALES)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesConocimiento($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_conocimiento = :saberes_conocimiento WHERE periodo = '$periodo' AND id_curso >= :id_curso1 AND id_curso <= :id_curso2");
+
+			$stmt->bindParam(":saberes_conocimiento", $datos["saberes_conocimiento"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}	
+
+		/*=============================================
+		COPIAR SABERES SOFTWARE (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesSoftware($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_software = :saberes_software WHERE periodo = '$periodo' AND id_curso >= :id_curso1");
+
+			$stmt->bindParam(":saberes_software", $datos["saberes_software"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			//$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+
+		/*=============================================
+		COPIAR SABERES SEGURIDAD (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesSeguridad($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_seguridad = :saberes_seguridad WHERE periodo = '$periodo' AND id_curso >= :id_curso1");
+
+			$stmt->bindParam(":saberes_seguridad", $datos["saberes_seguridad"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			//$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+		/*=============================================
+		COPIAR SABERES TECNOLÓGICO (INFORMÁTICA)           
+		=============================================*/
+
+		static public function mdlCopiarSaberesTecnologico($tabla, $datos, $periodo){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tecnologico = :saberes_tecnologico WHERE periodo = '$periodo' AND id_curso >= :id_curso1");
+
+			$stmt->bindParam(":saberes_tecnologico", $datos["saberes_tecnologico"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			//$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
 
 
 
@@ -1025,6 +1362,356 @@
 			$stmt->bindParam(":aprecia_fotografia", $datos["aprecia_fotografia"], PDO::PARAM_STR);
 			$stmt->bindParam(":asistencia_fotografia", $datos["asistencia_fotografia"], PDO::PARAM_STR);
 			$stmt->bindParam(":observa_fotografia", $datos["observa_fotografia"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME ANTROPOLOGIA 3 (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeAntropologia3($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_antropologia3 = :saberes_antropologia3, aprecia_antropologia3 = :aprecia_antropologia3, asistencia_antropologia3 = :asistencia_antropologia3, observa_antropologia3 = :observa_antropologia3, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_antropologia3", $datos["saberes_antropologia3"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_antropologia3", $datos["aprecia_antropologia3"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_antropologia3", $datos["asistencia_antropologia3"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_antropologia3", $datos["observa_antropologia3"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+
+		/*=============================================
+		EDITAR INFORME SISTEMAS (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeSistemas($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_sistemas = :saberes_sistemas, aprecia_sistemas = :aprecia_sistemas, asistencia_sistemas = :asistencia_sistemas, observa_sistemas = :observa_sistemas, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_sistemas", $datos["saberes_sistemas"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_sistemas", $datos["aprecia_sistemas"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_sistemas", $datos["asistencia_sistemas"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_sistemas", $datos["observa_sistemas"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME ANTROPOLOGIA 4 (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeAntropologia4($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_antropologia4 = :saberes_antropologia4, aprecia_antropologia4 = :aprecia_antropologia4, asistencia_antropologia4 = :asistencia_antropologia4, observa_antropologia4 = :observa_antropologia4, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_antropologia4", $datos["saberes_antropologia4"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_antropologia4", $datos["aprecia_antropologia4"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_antropologia4", $datos["asistencia_antropologia4"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_antropologia4", $datos["observa_antropologia4"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}		
+
+		/*=============================================
+		EDITAR INFORME COMUNICACION (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeComunicacion($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_comunicacion = :saberes_comunicacion, aprecia_comunicacion = :aprecia_comunicacion, asistencia_comunicacion = :asistencia_comunicacion, observa_comunicacion = :observa_comunicacion, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_comunicacion", $datos["saberes_comunicacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_comunicacion", $datos["aprecia_comunicacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_comunicacion", $datos["asistencia_comunicacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_comunicacion", $datos["observa_comunicacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}	
+
+		/*=============================================
+		EDITAR INFORME APLICACIONES (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeAplicaciones($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_aplicaciones = :saberes_aplicaciones, aprecia_aplicaciones = :aprecia_aplicaciones, asistencia_aplicaciones = :asistencia_aplicaciones, observa_aplicaciones = :observa_aplicaciones, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_aplicaciones", $datos["saberes_aplicaciones"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_aplicaciones", $datos["aprecia_aplicaciones"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_aplicaciones", $datos["asistencia_aplicaciones"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_aplicaciones", $datos["observa_aplicaciones"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME CONECTIVIDAD (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeConectividad($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_conectividad = :saberes_conectividad, aprecia_conectividad = :aprecia_conectividad, asistencia_conectividad = :asistencia_conectividad, observa_conectividad = :observa_conectividad, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_conectividad", $datos["saberes_conectividad"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_conectividad", $datos["aprecia_conectividad"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_conectividad", $datos["asistencia_conectividad"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_conectividad", $datos["observa_conectividad"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME PROYECTO (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeProyecto($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_proyecto = :saberes_proyecto, aprecia_proyecto = :aprecia_proyecto, asistencia_proyecto = :asistencia_proyecto, observa_proyecto = :observa_proyecto, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_proyecto", $datos["saberes_proyecto"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_proyecto", $datos["aprecia_proyecto"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_proyecto", $datos["asistencia_proyecto"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_proyecto", $datos["observa_proyecto"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME PROBLEMATICA (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeProblematica($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_problematica = :saberes_problematica, aprecia_problematica = :aprecia_problematica, asistencia_problematica = :asistencia_problematica, observa_problematica = :observa_problematica, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_problematica", $datos["saberes_problematica"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_problematica", $datos["aprecia_problematica"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_problematica", $datos["asistencia_problematica"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_problematica", $datos["observa_problematica"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME COMUNICACION (SOCIALES)            
+		=============================================*/
+
+		static public function mdlEditarInformeConocimiento($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_conocimiento = :saberes_conocimiento, aprecia_conocimiento = :aprecia_conocimiento, asistencia_conocimiento = :asistencia_conocimiento, observa_conocimiento = :observa_conocimiento, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_conocimiento", $datos["saberes_conocimiento"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_conocimiento", $datos["aprecia_conocimiento"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_conocimiento", $datos["asistencia_conocimiento"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_conocimiento", $datos["observa_conocimiento"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME SOFTWARE (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeSoftware($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_software = :saberes_software, aprecia_software = :aprecia_software, asistencia_software = :asistencia_software, observa_software = :observa_software, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_software", $datos["saberes_software"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_software", $datos["aprecia_software"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_software", $datos["asistencia_software"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_software", $datos["observa_software"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*=============================================
+		EDITAR INFORME SEGURIDAD (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeSeguridad($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_seguridad = :saberes_seguridad, aprecia_seguridad = :aprecia_seguridad, asistencia_seguridad = :asistencia_seguridad, observa_seguridad = :observa_seguridad, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_seguridad", $datos["saberes_seguridad"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_seguridad", $datos["aprecia_seguridad"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_seguridad", $datos["asistencia_seguridad"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_seguridad", $datos["observa_seguridad"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+
+		/*=============================================
+		EDITAR INFORME TECNOLÓGICO (INFORMÁTICA)            
+		=============================================*/
+
+		static public function mdlEditarInformeTecnologico($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tecnologico = :saberes_tecnologico, aprecia_tecnologico = :aprecia_tecnologico, asistencia_tecnologico = :asistencia_tecnologico, observa_tecnologico = :observa_tecnologico, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_tecnologico", $datos["saberes_tecnologico"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_tecnologico", $datos["aprecia_tecnologico"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_tecnologico", $datos["asistencia_tecnologico"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_tecnologico", $datos["observa_tecnologico"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
 
 
