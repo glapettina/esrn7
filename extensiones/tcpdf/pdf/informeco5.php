@@ -1022,6 +1022,76 @@ $pdf->writeHTML($bloque16, false, false, false, false, '');
 
 //--------------------------------------------------------
 
+//----------------------------------------------------------------------------------
+
+
+$bloque17 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				ESPACIO E.V.E.
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_eve]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_eve]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_eve]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_eve]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque17, false, false, false, false, '');
+
+//--------------------------------------------------------
+
 	
 }else{
 
