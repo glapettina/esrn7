@@ -420,6 +420,17 @@ foreach ($respuestaInforme as $key => $value) {
 
 		}
 
+		if ($_GET["area"] == "proyecto") {
+
+			$area = "C.O. - METODOLOGIA Y PROYECTO DE INVESTIGACION E INSERCION COMUNITARIA";
+
+			$saberes = $value["saberes_proyecto"];
+			$aprecia = $value["aprecia_proyecto"];
+			$asistencia = $value["asistencia_proyecto"];
+			$observa = $value["observa_proyecto"];
+
+		}
+
 		if ($_GET["area"] == "conocimiento") {
 
 			$area = "C.O. - PROBLEMATICA DEL CONOCIMIENTO SOCIAL";
