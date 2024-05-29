@@ -1646,8 +1646,6 @@ IMPRIMIR INFORME X ÁREA
 =============================================*/
 
 $(".btnInformeArea").click(function(){
-
-	//$(".tablas").on("click", ".btnInformeArea", function(){
 	
 	
 		var idCurso = $(this).attr("idCurso");

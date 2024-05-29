@@ -51,7 +51,6 @@ class imprimirReporte{
 		$periodo = $_GET["periodo"];
 		$verifica = true;
 
-
 		$per = explode('/', $periodo);
 
 		$per2 = $per[1];
@@ -113,45 +112,12 @@ class imprimirReporte{
 
 		 }
 
-		 if ($_GET["area"] == "fotogafia") {
+		 if ($_GET["area"] == "eve") {
 
-		 	$area = "CICLO ORIENTADO - FOTOGRAFIA";
+			$area = "ESPACIO E.V.E.";
 
-		 }
+		}
 
-		 if ($_GET["area"] == "realizacion") {
-
-		 	$area = "CICLO ORIENTADO - REALIZACIÓN AUDIOVISUAL";
-
-		 }
-
-		 if ($_GET["area"] == "guion") {
-
-		 	$area = "CICLO ORIENTADO - GUION";
-
-		 }
-
-		 if ($_GET["area"] == "sonido") {
-
-		 	$area = "CICLO ORIENTADO - SONIDO";
-
-		 }
-
-		 if ($_GET["area"] == "taller") {
-
-		 	$area = "CICLO ORIENTADO - TALLER DE REALIZACIÓN";
-
-		 }
-
-		 if ($_GET["area"] == "semiotica") {
-
-		 	$area = "CICLO ORIENTADO - SEMIÓTICA DE LA IMAGEN";
-
-		 }
-
-
-		
-		
 
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
@@ -345,72 +311,18 @@ foreach ($respuestaInforme as $key => $value) {
 
 		}
 
-		if ($_GET["area"] == "fotografia") {
+		if ($_GET["area"] == "eve") {
 
-			$area = "CICLO ORIENTADO - FOTOGRAFIA";
+			$area = "ESPACIO E.V.E.";
 
-			$saberes = $value["saberes_fotografia"];
-			$aprecia = $value["aprecia_fotografia"];
-			$asistencia = $value["asistencia_fotografia"];
-			$observa = $value["observa_fotografia"];
-
-		}
-
-		if ($_GET["area"] == "realizacion") {
-
-			$area = "CICLO ORIENTADO - REALIZACIÓN AUDIOVISUAL";
-
-			$saberes = $value["saberes_realizacion"];
-			$aprecia = $value["aprecia_realizacion"];
-			$asistencia = $value["asistencia_realizacion"];
-			$observa = $value["observa_realizacion"];
+			$saberes = $value["saberes_eve"];
+			$aprecia = $value["aprecia_eve"];
+			$asistencia = $value["asistencia_eve"];
+			$observa = $value["observa_eve"];
 
 		}
 
-		if ($_GET["area"] == "guion") {
-
-			$area = "CICLO ORIENTADO - GUION";
-
-			$saberes = $value["saberes_guion"];
-			$aprecia = $value["aprecia_guion"];
-			$asistencia = $value["asistencia_guion"];
-			$observa = $value["observa_guion"];
-
-		}
-
-		if ($_GET["area"] == "sonido") {
-
-			$area = "CICLO ORIENTADO - SONIDO";
-
-			$saberes = $value["saberes_sonido"];
-			$aprecia = $value["aprecia_sonido"];
-			$asistencia = $value["asistencia_sonido"];
-			$observa = $value["observa_sonido"];
-
-		}
-
-		if ($_GET["area"] == "taller") {
-
-			$area = "CICLO ORIENTADO - TALLER DE REALIZACIÓN";
-
-			$saberes = $value["saberes_taller"];
-			$aprecia = $value["aprecia_taller"];
-			$asistencia = $value["asistencia_taller"];
-			$observa = $value["observa_taller"];
-
-		}
-
-		if ($_GET["area"] == "semiotica") {
-
-			$area = "CICLO ORIENTADO - SEMIÓTICA DE LA IMAGEN";
-
-			$saberes = $value["saberes_semiotica"];
-			$aprecia = $value["aprecia_semiotica"];
-			$asistencia = $value["asistencia_semiotica"];
-			$observa = $value["observa_semiotica"];
-
-		}
-
+		
 
 
 
@@ -565,7 +477,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
@@ -635,7 +547,7 @@ $bloque6 = <<<EOF
 
 				<br>
 
-				$asistencia
+				$asistencia 
 
 			</td>	
 
